@@ -1,0 +1,25 @@
+# Ignorar configurações do VSCode (pode conter dados pessoais)
+.vscode/
+
+# Ignorar arquivos de ambiente (.env)
+.env
+
+# Ignorar a pasta de dependências do Node.js (se estiver usando Node)
+node_modules/
+
+# Ignorar diretórios de build ou distribuição
+/dist
+/build
+
+# Ignorar arquivos gerados pelo sistema operacional
+.DS_Store           # macOS
+Thumbs.db           # Windows
+
+# Ignorar logs e arquivos temporários
+*.log
+*.temp
+*.swp
+
+# Ignorar arquivos de configuração específicos do IDE (se houver)
+.idea/              # JetBrains IDEs (como WebStorm)
+*.sublime-workspace # Sublime Text

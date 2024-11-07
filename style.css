@@ -1,0 +1,44 @@
+/* Estilos personalizados */
+
+/* Estilos para o modo claro */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Estilos para o modo escuro */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: #ffffff;
+    }
+}
+
+/* Transição suave entre modos */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo para modo claro */
+body[data-theme="light"] {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Estilo para modo escuro */
+body[data-theme="dark"] {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+
+.jumbotron {
+    background-color: #f8f9fa;
+    padding: 4rem 2rem;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+}
