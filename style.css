@@ -7,23 +7,15 @@ body {
     color: #000000;
 }
 
-/* Estilos para o modo escuro */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #1e1e1e;
-        color: #ffffff;
-    }
-}
-
-/* Transição suave entre modos */
-body {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 /* Estilo para modo claro */
 body[data-theme="light"] {
     background-color: #ffffff;
     color: #000000;
+}
+
+/* Transição suave entre modos */
+body, .navbar, .jumbotron {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Estilo para modo escuro */
@@ -32,9 +24,27 @@ body[data-theme="dark"] {
     color: #ffffff;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: #ffffff;
+    }
+}
+
+/* Navbar e Jumbotron no Modo Claro */
+.navbar, .jumbotron {
+    background-color: #f8f9fa; /* cor clara */
+    color: #343a40; /* texto escuro */
+}
+
+/* Navbar e Jumbotron no Modo Escuro */
+body[data-theme="dark"] .navbar, 
+body[data-theme="dark"] .jumbotron {
+    background-color: #343a40; /* cor escura */
+    color: #ffffff; /* texto claro */
+}
 
 .jumbotron {
-    background-color: #f8f9fa;
     padding: 4rem 2rem;
 }
 

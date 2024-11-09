@@ -8,24 +8,39 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Douglas4GR</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <button id="toggle-theme">Alternar Tema</button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
-            </ul>
+        <div class="container-fluid">
+            <!-- Logo e Título -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="logo-sem-fundo.png" alt="logo" width="40" height="40" class="d-inline-block align-top me-2">
+                Douglas4GR
+            </a>
+    
+            <!-- Botão para exibir menu em telas menores -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Itens do menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Lista de links alinhada à esquerda -->
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+                </ul>
+    
+                <!-- Botão de alternar tema alinhado à direita -->
+                <button id="toggle-theme" class="btn btn-outline-secondary ms-auto">Alternar Tema</button>
+            </div>
         </div>
     </nav>
+    
 
     <!-- Banner de Cabeçalho -->
     <header class="jumbotron text-center">
