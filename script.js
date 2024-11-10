@@ -1,23 +1,27 @@
-// JavaScript personalizado
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("Página carregada!");
-    // Adicione aqui seu código JavaScript para interatividade
-});
-
-// Verifica se o usuário já definiu um tema preferido
+// Verificar se o usuário já definiu um tema preferido
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
     document.body.setAttribute("data-theme", savedTheme);
 } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    // Se não houver tema salvo, usa o tema preferido do sistema
     document.body.setAttribute("data-theme", "dark");
 }
 
-// Alterna entre os temas claro e escuro
+// Alternar entre os temas claro e escuro
 document.getElementById("toggle-theme").addEventListener("click", () => {
     const currentTheme = document.body.getAttribute("data-theme");
     const newTheme = currentTheme === "dark" ? "light" : "dark";
     document.body.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme); // Salva a preferência do usuário
-});
+    localStorage.setItem("theme", newTheme); // Salvar a preferência do usuário
 
+    // Atualizar os ícones do botão de alternar tema
+    const iconMoon = document.getElementById("icon-moon");
+    const iconSun = document.getElementById("icon-sun");
+
+    if (newTheme === "dark") {
+        iconMoon.style.display = "none";
+        iconSun.style.display = "inline";
+    } else {
+        iconMoon.style.display = "inline";
+        iconSun.style.display = "none";
+    }
+});

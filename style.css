@@ -52,3 +52,70 @@ footer {
     background-color: #343a40;
     color: #fff;
 }
+
+/* Estilos personalizados para os cards de redes sociais */
+.social-card {
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: block;
+}
+
+/* Ajuste da proporção dos cards para manter 1x1 */
+.social-card .card {
+    color: #ffffff;
+    font-size: 1.2rem;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    height: 0;
+    padding-bottom: 100%; /* Mantém o card quadrado */
+    position: relative; /* Necessário para centralização do texto */
+    overflow: hidden;
+}
+
+/* Centralização do texto no meio do card */
+.social-card .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Efeitos de hover e destaque */
+.social-card {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.social-card:not(:hover) {
+    filter: brightness(0.7);
+}
+
+/* Imagens de fundo para cada rede social */
+.instagram-card .card {
+    background-image: url('imagens/perfil-insta.jpg');
+}
+
+.linkedin-card .card {
+    background-image: url('imagens/perfil-linkedin.jpg');
+}
+
+.twitch-card .card {
+    background-image: url('imagens/perfil-twitch.jpg');
+}
+
+.github-card .card {
+    background-image: url('imagens/perfil-github.png');
+}
+
+.theme-toggle-btn .icon {
+    display: inline;
+}
