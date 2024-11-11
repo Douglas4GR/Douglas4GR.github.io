@@ -1,7 +1,4 @@
 /* Champagne */
-.background-champagne {
-	background-color: #6F1D1B;
-}
 .metacolor-champagne {
     background-color: #99582A;
 }
@@ -10,27 +7,26 @@
     color: #432818;
 }
 .navbar-champagne {
-    background-color: #432818; /* Cor de fundo da navbar */
-    color: #FFE6A7; /* Cor do texto */
+    background-color: #a27c3f;
+    color: #FFE6A7;
 }
 
 .navbar-champagne .navbar-brand,
 .navbar-champagne .navbar-nav .nav-link,
 .navbar-champagne .navbar-toggler-icon {
-    color: #FFE6A7; /* Cor dos links e ícones */
+    color: #FFE6A7;
 }
 
+.navbar-champagne .navbar-brand:hover,
 .navbar-champagne .navbar-nav .nav-link:hover,
+.navbar-champagne .navbar-brand:focus,
 .navbar-champagne .navbar-nav .nav-link:focus {
-    color: #FFD700; /* Cor do link ao passar o mouse ou focar (amarelo mais forte) */
-}
-
-.navbar-champagne .navbar-toggler-icon {
-    background-color: #FFE6A7; /* Cor do ícone de alternância (amarelo claro) */
+    color: #FFD700;
 }
 
 .jumbotron-champagne {
     background-color: #BB9457;
+    color: #3d130c;
 }
 .destaque-champagne {
     background-color: #FFD700;
@@ -39,11 +35,12 @@
     padding: 0px 5px;
 }
 body[data-theme="champagne"] {
-    background-color: #6F1D1B;
+    background: rgb(111,29,27);
+    background: linear-gradient(0deg, rgba(111,29,27,1) 80%, rgba(78,20,19,1) 90%, rgba(45,11,11,1) 95%);
     color: #ffe8b4;
 }
 .logo-champagne {
-    background-image: url('imagens/logo-preto.png');
+    background-image: url('imagens/logo-champagne.png');
     width: 40px;
     height: 40px;
     background-size: cover;
@@ -51,18 +48,15 @@ body[data-theme="champagne"] {
     display: inline-block;
 }
 
+
+
+
 /* Coast */
-.background-coast {
-	background-color: #0A0908;
-}
 .metacolor-coast {
     background-color: #5E503F;
 }
 .footer-coast {
     background-color: #5E503F;
-}
-.navbar-coast {
-    background-color: #C6AC8F;
 }
 .jumbotron-coast {
     background-color: #22333B;
@@ -75,14 +69,39 @@ body[data-theme="champagne"] {
 
 }
 body[data-theme="coast"] {
-    background-color: #0A0908;
+    background-color: #162329;
     color: #ffffff;
 }
+.navbar-coast {
+    background-color: #C6AC8F;
+    color: #23485a;
+}
+
+.navbar-coast .navbar-brand,
+.navbar-coast .navbar-nav .nav-link,
+.navbar-coast .navbar-toggler-icon {
+    color: #23485a;
+}
+
+.navbar-coast .navbar-brand:hover,
+.navbar-coast .navbar-nav .nav-link:hover,
+.navbar-coast .navbar-brand:focus,
+.navbar-coast .navbar-nav .nav-link:focus {
+    color: #1a75a0;
+}
+
+.logo-coast {
+    background-image: url('imagens/logo-coast.png');
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+
+
 
 /* Taiga */
-.background-taiga {
-	background-color: #DDA15E;
-}
 .metacolor-taiga {
     background-color: #BC6C25;
 }
