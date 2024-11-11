@@ -4,115 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Página Pessoal</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Estilos personalizados -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cores.css">
     <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <!-- Meta tag para o tema atual -->
+    <meta name="theme-color" content="#ffffff" id="meta-theme-color">
 </head>
-<body>
+<body data-theme="light">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <!-- Logo e Título -->
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="imagens/logo-sem-fundo.png" alt="logo" width="40" height="40" class="d-inline-block align-top me-2">
-                Douglas4GR
+                <div class="logo-champagne" class="logo"></div>
+                <div class="ms-2">Douglas4GR</div>
             </a>
-    
-            <!-- Botão para exibir menu em telas menores -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
-            <!-- Itens do menu -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
                     <li class="nav-item"><a class="nav-link" href="#social-media">Redes</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
                 </ul>
-    
-                <button id="toggle-theme" class="theme-toggle-btn btn" onclick="toggleTheme()">
-                    <span id="icon-moon" class="icon" style="display: none;">
-                        <!-- Lua SVG -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars" viewBox="0 0 16 16">
-                            <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
-                            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
-                        </svg>
-                    </span>
-                    <span id="icon-sun" class="icon" style="display: inline;">
-                        <!-- Sol SVG -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-alt-high" viewBox="0 0 16 16">
-                            <path d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3m8 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5m-13.5.5a.5.5 0 0 0 0-1h-2a.5.5 0 0 0 0 1zm11.157-6.157a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m-9.9 2.121a.5.5 0 0 0 .707-.707L3.05 5.343a.5.5 0 1 0-.707.707zM8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4m0 1a3 3 0 0 1 2.959 2.5H5.04A3 3 0 0 1 8 8"/>
-                        </svg>
-                    </span>
-                </button>                
+
+                <!-- Dropdown de seleção de tema -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" id="colorModeDropdown" type="button" data-bs-toggle="dropdown">
+                        <span id="activeModeText">Modo Atual</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="colorModeDropdown">
+                        <li><a class="dropdown-item" href="#" data-theme="light">Modo Claro</a></li>
+                        <li><a class="dropdown-item" href="#" data-theme="dark">Modo Escuro</a></li>
+                        <li><a class="dropdown-item" href="#" data-theme="champagne">Champagne</a></li>
+                        <li><a class="dropdown-item" href="#" data-theme="coast">Coast</a></li>
+                        <li><a class="dropdown-item" href="#" data-theme="taiga">Taiga</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
-    
 
-    <!-- Banner de Cabeçalho -->
+    <!-- Jumbotron -->
     <header class="jumbotron text-center">
         <h1 class="display-4">Prazer, meu nome é Douglas</h1>
-        <p class="lead">Garanto que esta frase ficará <span style="background-color: rgb(191, 253, 147); font-family: 'Courier New', Courier, monospace; color: black;"> marcada</span> em sua memória.</p>
+        <p class="lead">Garanto que esta frase ficará <em class="destaque"> marcada</em> em sua memória.</p>
     </header>
-
+    
     <!-- Sobre Mim -->
     <section id="about" class="container my-5">
         <h2 class="text-center mb-4">Sobre Mim</h2>
         <p class="text-center">Ainda tenho que pensar...</p>
     </section>
 
-<!-- Redes Sociais -->
-<section id="social-media" class="container my-5">
-    <h2 class="text-center mb-4">Redes Sociais</h2>
-    <div class="row justify-content-center">
-        <!-- Card do Instagram -->
-        <div class="col-md-3 col-6 mb-3">
-            <a href="https://www.instagram.com/seuusuario" target="_blank" class="social-card instagram-card">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Instagram</h5>
+    <!-- Redes Sociais -->
+    <section id="social-media" class="container my-5">
+        <h2 class="text-center mb-4">Redes Sociais</h2>
+        <div class="row justify-content-center">
+            <!-- Cards das redes sociais com classes para estilos específicos -->
+            <div class="col-md-3 col-6 mb-3">
+                <a href="https://www.instagram.com/seuusuario" target="_blank" class="social-card instagram-card">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Instagram</h5>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <!-- Card do Twitch -->
-        <div class="col-md-3 col-6 mb-3">
-            <a href="https://www.twitch.tv/seuusuario" target="_blank" class="social-card twitch-card">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Twitch</h5>
+                </a>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <a href="https://www.twitch.tv/seuusuario" target="_blank" class="social-card twitch-card">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Twitch</h5>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <!-- Card do LinkedIn -->
-        <div class="col-md-3 col-6 mb-3">
-            <a href="https://www.linkedin.com/in/seuusuario" target="_blank" class="social-card linkedin-card">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">LinkedIn</h5>
+                </a>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <a href="https://www.linkedin.com/in/seuusuario" target="_blank" class="social-card linkedin-card">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">LinkedIn</h5>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <!-- Card do Github -->
-        <div class="col-md-3 col-6 mb-3">
-            <a href="https://www.github.com/seuusuario" target="_blank" class="social-card github-card">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Github</h5>
+                </a>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <a href="https://www.github.com/seuusuario" target="_blank" class="social-card github-card">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Github</h5>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
-    </div>
-</section>
-
+    </section>
 
     <!-- Portfólio -->
     <section id="portfolio" class="container my-5">
@@ -127,32 +116,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="assets/projeto2.jpg" class="card-img-top" alt="Projeto 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Projeto 2</h5>
-                        <p class="card-text">Descrição breve do projeto.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="assets/projeto3.jpg" class="card-img-top" alt="Projeto 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Projeto 3</h5>
-                        <p class="card-text">Descrição breve do projeto.</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
-
-
     <!-- Footer -->
     <footer class="text-center py-4">
-        <p>&copy; 2024 Douglas4GR. Todos os direitos reservados.</p>
+        <p>Portanto, não vos inquieteis com o dia de amanhã, pois o amanhã trará suas próprias preocupações. Basta a cada dia o seu mal. Mat 6:34</p>
     </footer>
 
     <!-- Bootstrap JS e dependências -->

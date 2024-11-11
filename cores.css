@@ -1,0 +1,107 @@
+/* Champagne */
+.background-champagne {
+	background-color: #6F1D1B;
+}
+.metacolor-champagne {
+    background-color: #99582A;
+}
+.footer-champagne {
+    background-color: #99582A;
+    color: #432818;
+}
+.navbar-champagne {
+    background-color: #432818; /* Cor de fundo da navbar */
+    color: #FFE6A7; /* Cor do texto */
+}
+
+.navbar-champagne .navbar-brand,
+.navbar-champagne .navbar-nav .nav-link,
+.navbar-champagne .navbar-toggler-icon {
+    color: #FFE6A7; /* Cor dos links e ícones */
+}
+
+.navbar-champagne .navbar-nav .nav-link:hover,
+.navbar-champagne .navbar-nav .nav-link:focus {
+    color: #FFD700; /* Cor do link ao passar o mouse ou focar (amarelo mais forte) */
+}
+
+.navbar-champagne .navbar-toggler-icon {
+    background-color: #FFE6A7; /* Cor do ícone de alternância (amarelo claro) */
+}
+
+.jumbotron-champagne {
+    background-color: #BB9457;
+}
+.destaque-champagne {
+    background-color: #FFD700;
+    font-family: 'Courier New', Courier, monospace; 
+    color: black;
+    padding: 0px 5px;
+}
+body[data-theme="champagne"] {
+    background-color: #6F1D1B;
+    color: #ffe8b4;
+}
+.logo-champagne {
+    background-image: url('imagens/logo-preto.png');
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+
+/* Coast */
+.background-coast {
+	background-color: #0A0908;
+}
+.metacolor-coast {
+    background-color: #5E503F;
+}
+.footer-coast {
+    background-color: #5E503F;
+}
+.navbar-coast {
+    background-color: #C6AC8F;
+}
+.jumbotron-coast {
+    background-color: #22333B;
+}
+.destaque-coast {
+    background-color: #EAE0D5;
+    font-family: 'Courier New', Courier, monospace; 
+    color: black;
+    padding: 0px 5px;
+
+}
+body[data-theme="coast"] {
+    background-color: #0A0908;
+    color: #ffffff;
+}
+
+/* Taiga */
+.background-taiga {
+	background-color: #DDA15E;
+}
+.metacolor-taiga {
+    background-color: #BC6C25;
+}
+.footer-taiga {
+    background-color: #BC6C25;
+}
+.navbar-taiga {
+    background-color: #283618;
+}
+.jumbotron-taiga {
+    background-color: #606C38;
+}
+.destaque-taiga {
+    background-color: #FEFAE0;
+    font-family: 'Courier New', Courier, monospace; 
+    color: black;
+    padding: 0px 5px;
+}
+body[data-theme="taiga"] {
+    background-color: #DDA15E;
+    color: #ffffff;
+}

@@ -1,27 +1,49 @@
-// Verificar se o usuário já definiu um tema preferido
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-    document.body.setAttribute("data-theme", savedTheme);
-} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    document.body.setAttribute("data-theme", "dark");
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownItems = document.querySelectorAll(".dropdown-item");
+    const activeModeText = document.getElementById("activeModeText");
+    const metaThemeColor = document.getElementById("meta-theme-color");
 
-// Alternar entre os temas claro e escuro
-document.getElementById("toggle-theme").addEventListener("click", () => {
-    const currentTheme = document.body.getAttribute("data-theme");
-    const newTheme = currentTheme === "dark" ? "light" : "dark";
-    document.body.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme); // Salvar a preferência do usuário
+    // Função para aplicar o tema selecionado
+    function applyTheme(theme) {
+        document.body.setAttribute("data-theme", theme);
+        const navbar = document.querySelector("nav");
+        const jumbotron = document.querySelector(".jumbotron");
+        const footer = document.querySelector("footer");
+        const em = document.querySelector("em");
 
-    // Atualizar os ícones do botão de alternar tema
-    const iconMoon = document.getElementById("icon-moon");
-    const iconSun = document.getElementById("icon-sun");
+        // Configurações de cores para cada tema
+        const colorSettings = {
+            light: { navbar: "navbar-light bg-light", jumbotron: "bg-light", footer: "bg-light", metaColor: "#ffffff", em: "destaque-blackwhite"},
+            dark: { navbar: "navbar-dark bg-dark", jumbotron: "bg-dark", footer: "bg-dark", metaColor: "#333333", em: "destaque-blackwhite" },
+            champagne: { navbar: " navbar-champagne", jumbotron: "jumbotron-champagne", footer: "footer-champagne", metaColor: "#99582A", em: "destaque-champagne" },
+            coast: { navbar: "navbar-light navbar-coast", jumbotron: "jumbotron-coast", footer: "footer-coast", metaColor: "#5E503F", em: "destaque-coast" },
+            taiga: { navbar: "navbar-dark navbar-taiga", jumbotron: "jumbotron-taiga", footer: "footer-taiga", metaColor: "#BC6C25", em: "destaque-taiga" },
+        };
 
-    if (newTheme === "dark") {
-        iconMoon.style.display = "none";
-        iconSun.style.display = "inline";
-    } else {
-        iconMoon.style.display = "inline";
-        iconSun.style.display = "none";
+        const settings = colorSettings[theme];
+
+        if (settings) {
+            navbar.className = `navbar navbar-expand-lg ${settings.navbar}`;
+            jumbotron.className = `jumbotron text-center ${settings.jumbotron}`;
+            footer.className = `text-center py-4 ${settings.footer}`;
+            metaThemeColor.setAttribute("content", settings.metaColor);
+            activeModeText.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
+            em.className = `${settings.em}`;
+        }
     }
+
+    // Detecta o tema preferido do dispositivo
+    const defaultTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+
+    // Aplica o tema padrão ao carregar a página
+    applyTheme(defaultTheme);
+
+    // Event listener para cada item do dropdown
+    dropdownItems.forEach(item => {
+        item.addEventListener("click", function (e) {
+            e.preventDefault();
+            const selectedTheme = item.getAttribute("data-theme");
+            applyTheme(selectedTheme);
+        });
+    });
 });
