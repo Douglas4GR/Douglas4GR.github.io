@@ -170,10 +170,26 @@ body[data-theme="taiga"] {
 }
 
 .main-taiga {
+    background-image: url('imagens/taiga.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #DDA15E;
-    color: #17110b;
+    color: #ffffff;
+    text-shadow: #000000 1px 0 5px;
 }
 
 .footer-taiga {
     background-color: #BC6C25;
+}
+
+
+
+/* blur */
+.blur-card {
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 10px;
 }

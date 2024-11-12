@@ -12,22 +12,25 @@ document.addEventListener("DOMContentLoaded", function () {
         const em = document.querySelector("em");
         const logo = document.querySelector(".logo");
         const main = document.querySelector("main");
+        const cartas = document.querySelectorAll(".carta"); // Seleciona todas as instâncias de .carta
 
         // Configurações de cores para cada tema
         const colorSettings = {
             light: { 
                 navbar: "navbar-light bg-light", 
                 jumbotron: "bg-light", 
-                main: " ",
+                main: "",
+                carta: "",
                 footer: "bg-dark", 
                 metaColor: "#ffffff", 
                 em: "destaque-blackwhite", 
-                logo: "logo-blackwhite" 
+                logo: "logo-blackwhite"
             },
             dark: { 
                 navbar: "navbar-dark bg-dark", 
                 jumbotron: "bg-dark", 
-                main: " ",
+                main: "",
+                carta: "",
                 footer: "bg-dark", 
                 metaColor: "#333333", 
                 em: "destaque-blackwhite", 
@@ -37,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 navbar: "navbar-champagne navbar-dark", 
                 jumbotron: "jumbotron-champagne", 
                 main: "main-champagne",
+                carta: "carta-champagne", // Classe específica para a carta
                 footer: "footer-champagne", 
                 metaColor: "#99582A", 
                 em: "destaque-champagne", 
@@ -46,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 navbar: "navbar-light navbar-coast", 
                 jumbotron: "jumbotron-coast", 
                 main: "main-coast",
+                carta: "carta-coast", // Classe específica para a carta
                 footer: "footer-coast", 
                 metaColor: "#5E503F", 
                 em: "destaque-coast", 
@@ -55,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 navbar: "navbar-dark navbar-taiga", 
                 jumbotron: "jumbotron-taiga", 
                 main: "main-taiga",
+                carta: "blur-card", // Classe específica para a carta
                 footer: "footer-taiga", 
                 metaColor: "#BC6C25", 
                 em: "destaque-taiga", 
@@ -65,25 +71,28 @@ document.addEventListener("DOMContentLoaded", function () {
         const settings = colorSettings[theme];
 
         if (settings) {
-            // Modificando as classes da navbar, jumbotron, footer, e outras
             navbar.className = `navbar navbar-expand-lg ${settings.navbar}`;
             jumbotron.className = `jumbotron text-center ${settings.jumbotron}`;
             footer.className = `text-center py-4 ${settings.footer}`;
+            main.className = `${settings.main}`;
             metaThemeColor.setAttribute("content", settings.metaColor);
             activeModeText.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
-            em.className = `${settings.em}`;
-            main.className = `${settings.main}`;
 
-            // Alterando a classe do logo
-            logo.classList.remove("logo-blackwhite", "logo-champagne", "logo-coast", "logo-taiga"); // Remove todas as classes antigas de logo
-            logo.classList.add(settings.logo); // Adiciona a nova classe de logo
+            if (em) {
+                em.className = `${settings.em}`;
+            }
+            if (logo) {
+                logo.classList.remove("logo-blackwhite", "logo-champagne", "logo-coast", "logo-taiga");
+                logo.classList.add(settings.logo);
+            }
+
+            cartas.forEach(carta => {
+                carta.className = `carta ${settings.carta}`; // Aplica a classe de tema específica a cada carta
+            });
         }
     }
 
-    // Detecta o tema preferido do dispositivo
     const defaultTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-
-    // Aplica o tema padrão ao carregar a página
     applyTheme(defaultTheme);
 
     // Event listener para cada item do dropdown
