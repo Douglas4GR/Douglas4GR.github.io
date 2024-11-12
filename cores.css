@@ -2,21 +2,31 @@
 .metacolor-champagne {
     background-color: #99582A;
 }
-.footer-champagne {
-    background-color: #99582A;
-    color: #432818;
+
+body[data-theme="champagne"] {
+    background: rgb(111,29,27);
+    background: linear-gradient(0deg, rgba(111,29,27,1) 80%, rgba(78,20,19,1) 90%, rgba(45,11,11,1) 95%);
+    color: #ffe8b4;
 }
+
+.logo-champagne {
+    background-image: url('imagens/logo-champagne.png');
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+
 .navbar-champagne {
     background-color: #a27c3f;
     color: #FFE6A7;
 }
-
 .navbar-champagne .navbar-brand,
 .navbar-champagne .navbar-nav .nav-link,
 .navbar-champagne .navbar-toggler-icon {
     color: #FFE6A7;
 }
-
 .navbar-champagne .navbar-brand:hover,
 .navbar-champagne .navbar-nav .nav-link:hover,
 .navbar-champagne .navbar-brand:focus,
@@ -34,18 +44,16 @@
     color: black;
     padding: 0px 5px;
 }
-body[data-theme="champagne"] {
+
+.main-champagne {
     background: rgb(111,29,27);
     background: linear-gradient(0deg, rgba(111,29,27,1) 80%, rgba(78,20,19,1) 90%, rgba(45,11,11,1) 95%);
     color: #ffe8b4;
 }
-.logo-champagne {
-    background-image: url('imagens/logo-champagne.png');
-    width: 40px;
-    height: 40px;
-    background-size: cover;
-    background-position: center;
-    display: inline-block;
+
+.footer-champagne {
+    background-color: #99582A;
+    color: #432818;
 }
 
 
@@ -55,39 +63,11 @@ body[data-theme="champagne"] {
 .metacolor-coast {
     background-color: #5E503F;
 }
-.footer-coast {
-    background-color: #5E503F;
-}
-.jumbotron-coast {
-    background-color: #22333B;
-}
-.destaque-coast {
-    background-color: #EAE0D5;
-    font-family: 'Courier New', Courier, monospace; 
-    color: black;
-    padding: 0px 5px;
 
-}
 body[data-theme="coast"] {
-    background-color: #162329;
-    color: #ffffff;
-}
-.navbar-coast {
-    background-color: #C6AC8F;
-    color: #23485a;
-}
-
-.navbar-coast .navbar-brand,
-.navbar-coast .navbar-nav .nav-link,
-.navbar-coast .navbar-toggler-icon {
-    color: #23485a;
-}
-
-.navbar-coast .navbar-brand:hover,
-.navbar-coast .navbar-nav .nav-link:hover,
-.navbar-coast .navbar-brand:focus,
-.navbar-coast .navbar-nav .nav-link:focus {
-    color: #1a75a0;
+    background: rgb(7,11,13);
+    background: linear-gradient(0deg, rgba(7,11,13,1) 0%, rgba(22,35,41,1) 20%, rgba(22,35,41,1) 80%, rgba(7,11,13,1) 100%);
+    color: #acdcf4;
 }
 
 .logo-coast {
@@ -99,28 +79,101 @@ body[data-theme="coast"] {
     display: inline-block;
 }
 
+.navbar-coast {
+    background-color: #C6AC8F;
+    color: #23485a;
+}
+.navbar-coast .navbar-brand,
+.navbar-coast .navbar-nav .nav-link,
+.navbar-coast .navbar-toggler-icon {
+    color: #23485a;
+}
+.navbar-coast .navbar-brand:hover,
+.navbar-coast .navbar-nav .nav-link:hover,
+.navbar-coast .navbar-brand:focus,
+.navbar-coast .navbar-nav .nav-link:focus {
+    color: #1a75a0;
+}
+
+.jumbotron-coast {
+    background: rgb(34,51,59);
+    background: linear-gradient(0deg, rgba(34,51,59,1) 80%, rgba(30,45,54,1) 91%, rgba(19,32,40,1) 100%);    color: #faf1e8;
+}
+
+.destaque-coast {
+    background-color: #56c7ff;
+    font-family: 'Courier New', Courier, monospace; 
+    color: black;
+    padding: 0px 5px;
+
+}
+
+.main-coast {
+    background: rgb(7,11,13);
+    background: linear-gradient(0deg, rgba(7,11,13,1) 0%, rgba(22,35,41,1) 20%, rgba(22,35,41,1) 80%, rgba(7,11,13,1) 100%);
+    color: #acdcf4;
+}
+
+.footer-coast {
+    background-color: #5b4a35;
+    color: #d6c4af;
+}
+
+
 
 
 /* Taiga */
 .metacolor-taiga {
     background-color: #BC6C25;
 }
-.footer-taiga {
-    background-color: #BC6C25;
+
+body[data-theme="taiga"] {
+    background-color: #DDA15E;
+    color: #17110b;
 }
+
+.logo-taiga {
+    background-image: url('imagens/logo-taiga.png');
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+
 .navbar-taiga {
     background-color: #283618;
+    color: #f1f9d7;
 }
+.navbar-taiga .navbar-brand,
+.navbar-taiga .navbar-nav .nav-link,
+.navbar-taiga .navbar-toggler-icon {
+    color: #f1f9d7;
+}
+.navbar-taiga .navbar-brand:hover,
+.navbar-taiga .navbar-nav .nav-link:hover,
+.navbar-taiga .navbar-brand:focus,
+.navbar-taiga .navbar-nav .nav-link:focus {
+    color: #cbe575;
+}
+
 .jumbotron-taiga {
     background-color: #606C38;
+    color: white;
 }
+
 .destaque-taiga {
-    background-color: #FEFAE0;
+    background-color: #d2ee75;
     font-family: 'Courier New', Courier, monospace; 
     color: black;
     padding: 0px 5px;
 }
-body[data-theme="taiga"] {
+
+.main-taiga {
     background-color: #DDA15E;
-    color: #ffffff;
+    color: #17110b;
+}
+
+.footer-taiga {
+    background-color: #BC6C25;
 }

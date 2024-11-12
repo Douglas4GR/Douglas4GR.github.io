@@ -11,14 +11,55 @@ document.addEventListener("DOMContentLoaded", function () {
         const footer = document.querySelector("footer");
         const em = document.querySelector("em");
         const logo = document.querySelector(".logo");
+        const main = document.querySelector("main");
 
         // Configurações de cores para cada tema
         const colorSettings = {
-            light: { navbar: "navbar-light bg-light", jumbotron: "bg-light", footer: "bg-dark", metaColor: "#ffffff", em: "destaque-blackwhite", logo: "logo-blackwhite" },
-            dark: { navbar: "navbar-dark bg-dark", jumbotron: "bg-dark", footer: "bg-dark", metaColor: "#333333", em: "destaque-blackwhite", logo: "logo-blackwhite" },
-            champagne: { navbar: "navbar-champagne navbar-dark", jumbotron: "jumbotron-champagne", footer: "footer-champagne", metaColor: "#99582A", em: "destaque-champagne", logo: "logo-champagne" },
-            coast: { navbar: "navbar-light navbar-coast", jumbotron: "jumbotron-coast", footer: "footer-coast", metaColor: "#5E503F", em: "destaque-coast", logo: "logo-coast" },
-            taiga: { navbar: "navbar-dark navbar-taiga", jumbotron: "jumbotron-taiga", footer: "footer-taiga", metaColor: "#BC6C25", em: "destaque-taiga", logo: "logo-champagne" },
+            light: { 
+                navbar: "navbar-light bg-light", 
+                jumbotron: "bg-light", 
+                main: " ",
+                footer: "bg-dark", 
+                metaColor: "#ffffff", 
+                em: "destaque-blackwhite", 
+                logo: "logo-blackwhite" 
+            },
+            dark: { 
+                navbar: "navbar-dark bg-dark", 
+                jumbotron: "bg-dark", 
+                main: " ",
+                footer: "bg-dark", 
+                metaColor: "#333333", 
+                em: "destaque-blackwhite", 
+                logo: "logo-blackwhite" 
+            },
+            champagne: { 
+                navbar: "navbar-champagne navbar-dark", 
+                jumbotron: "jumbotron-champagne", 
+                main: "main-champagne",
+                footer: "footer-champagne", 
+                metaColor: "#99582A", 
+                em: "destaque-champagne", 
+                logo: "logo-champagne" 
+            },
+            coast: { 
+                navbar: "navbar-light navbar-coast", 
+                jumbotron: "jumbotron-coast", 
+                main: "main-coast",
+                footer: "footer-coast", 
+                metaColor: "#5E503F", 
+                em: "destaque-coast", 
+                logo: "logo-coast" 
+            },
+            taiga: { 
+                navbar: "navbar-dark navbar-taiga", 
+                jumbotron: "jumbotron-taiga", 
+                main: "main-taiga",
+                footer: "footer-taiga", 
+                metaColor: "#BC6C25", 
+                em: "destaque-taiga", 
+                logo: "logo-taiga" 
+            },
         };
 
         const settings = colorSettings[theme];
@@ -31,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
             metaThemeColor.setAttribute("content", settings.metaColor);
             activeModeText.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
             em.className = `${settings.em}`;
+            main.className = `${settings.main}`;
 
             // Alterando a classe do logo
             logo.classList.remove("logo-blackwhite", "logo-champagne", "logo-coast", "logo-taiga"); // Remove todas as classes antigas de logo
