@@ -1,9 +1,10 @@
-
+/* Tema claro */
 body[data-theme="light"] {
     background-color: #ffffff;
     color: #000000;
 }
 
+/* Tema escuro */
 body[data-theme="dark"] {
     background-color: #1e1e1e;
     color: #ffffff;
@@ -20,6 +21,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Estilo da logo */
 .logo-blackwhite {
     background-image: url('imagens/logo-sem-fundo.png');
     width: 40px;
@@ -29,28 +31,15 @@ body {
     display: inline-block;
 }
 
-/* Estilo para modo escuro */
-body[data-theme="dark"] {
-    background-color: #1e1e1e;
-    color: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #1e1e1e;
-        color: #ffffff;
-    }
-}
-
-/* Navbar e Jumbotron no Modo Claro */
+/* Navbar e Jumbotron nos temas claro e escuro */
 .navbar, .jumbotron {
     background-color: #f8f9fa; /* cor clara */
     color: #343a40; /* texto escuro */
 }
 
-/* Navbar e Jumbotron no Modo Escuro */
 body[data-theme="dark"] .navbar, 
-body[data-theme="dark"] .jumbotron {
+body[data-theme="dark"] .jumbotron,
+footer {
     background-color: #343a40; /* cor escura */
     color: #ffffff; /* texto claro */
 }
@@ -59,19 +48,21 @@ body[data-theme="dark"] .jumbotron {
     padding: 4rem 2rem;
 }
 
-footer {
-    background-color: #343a40;
-    color: #fff;
-}
-
-/* Estilos personalizados para os cards de redes sociais */
+/* Cards de redes sociais */
 .social-card {
     text-decoration: none;
-    transition: transform 0.3s ease, opacity 0.3s ease;
     display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.social-card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+.social-card:not(:hover) {
+    filter: brightness(0.7);
 }
 
-/* Ajuste da proporção dos cards para manter 1x1 */
+/* Card com proporção 1x1 e centralização do texto */
 .social-card .card {
     color: #ffffff;
     font-size: 1.2rem;
@@ -79,12 +70,10 @@ footer {
     background-position: center;
     border: none;
     height: 0;
-    padding-bottom: 100%; /* Mantém o card quadrado */
-    position: relative; /* Necessário para centralização do texto */
+    padding-bottom: 100%;
+    position: relative;
     overflow: hidden;
 }
-
-/* Centralização do texto no meio do card */
 .social-card .card-body {
     display: flex;
     justify-content: center;
@@ -96,37 +85,29 @@ footer {
     height: 100%;
 }
 
-/* Efeitos de hover e destaque */
-.social-card {
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.social-card:hover {
-    transform: scale(1.1);
-    z-index: 1;
-}
-
-.social-card:not(:hover) {
-    filter: brightness(0.7);
-}
-
 /* Imagens de fundo para cada rede social */
 .instagram-card .card {
     background-image: url('imagens/perfil-insta.jpg');
 }
-
 .linkedin-card .card {
     background-image: url('imagens/perfil-linkedin.jpg');
 }
-
 .twitch-card .card {
     background-image: url('imagens/perfil-twitch.jpg');
 }
-
 .github-card .card {
     background-image: url('imagens/perfil-github.png');
 }
 
-.theme-toggle-btn .icon {
-    display: inline;
+.modal-body {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.btn-theme {
+    width: 100px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
 }
