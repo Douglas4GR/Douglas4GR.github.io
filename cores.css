@@ -49,11 +49,25 @@ body[data-theme="champagne"] {
     background: rgb(111,29,27);
     background: linear-gradient(0deg, rgba(111,29,27,1) 80%, rgba(78,20,19,1) 90%, rgba(45,11,11,1) 95%);
     color: #ffe8b4;
+
+    background-image: url('imagens/champ2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: brightness(0.8);
 }
 
 .footer-champagne {
-    background-color: #99582A;
-    color: #432818;
+    background-color: #502429;
+    color: #ffe8b4;
+}
+
+.carta-champagne {
+    border-radius: 15px;
+    backdrop-filter: sepia(20%);
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
 }
 
 
@@ -183,6 +197,7 @@ body[data-theme="taiga"] {
 .footer-taiga {
     background-color: #BC6C25;
 }
+
 
 
 

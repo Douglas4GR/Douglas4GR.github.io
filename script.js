@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const activeModeText = document.getElementById("activeModeText");
     const metaThemeColor = document.getElementById("meta-theme-color");
-    const botdrop = document.getElementById("themeSelectorButton"); // Botão que abre o modal
 
     // Função para aplicar o tema selecionado
     function applyTheme(theme) {
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 metaColor: "#ffffff", 
                 em: "destaque-blackwhite", 
                 logo: "logo-blackwhite",
-                botdrop: "btn-outline-dark"
             },
             dark: { 
                 navbar: "navbar-dark bg-dark dark", 
@@ -36,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 metaColor: "#333333", 
                 em: "destaque-blackwhite", 
                 logo: "logo-blackwhite",
-                botdrop: "btn-outline-light"
             },
             champagne: { 
                 navbar: "navbar-champagne navbar-dark", 
@@ -47,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 metaColor: "#99582A", 
                 em: "destaque-champagne", 
                 logo: "logo-champagne",
-                botdrop: "btn-outline-champagne"
             },
             coast: { 
                 navbar: "navbar-light navbar-coast", 
@@ -58,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 metaColor: "#5E503F", 
                 em: "destaque-coast", 
                 logo: "logo-coast",
-                botdrop: "btn-outline-coast"
             },
             taiga: { 
                 navbar: "navbar-dark navbar-taiga", 
@@ -69,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 metaColor: "#BC6C25", 
                 em: "destaque-taiga", 
                 logo: "logo-taiga",
-                botdrop: "btn-outline-taiga"
             },
         };
 
@@ -82,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (main) main.className = `${settings.main}`;
             if (metaThemeColor) metaThemeColor.setAttribute("content", settings.metaColor);
             if (activeModeText) activeModeText.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
-            if (botdrop) botdrop.className = `btn btn-sm ${settings.botdrop}`;
 
             if (em) em.className = `${settings.em}`;
             if (logo) {

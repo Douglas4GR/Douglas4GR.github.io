@@ -111,3 +111,11 @@ footer {
     font-size: 16px;
     cursor: pointer;
 }
+
+
+.navbar-nav .nav-link:not(:focus):hover {
+    color: inherit; /* Ou outra cor */
+}
+.navbar-nav .nav-link.active {
+    color: inherit; /* Ou outra cor */
+}
