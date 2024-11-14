@@ -1,16 +1,16 @@
-/* Champagne */
-.metacolor-champagne {
+/* golden */
+.metacolor-golden {
     background-color: #99582A;
 }
 
-body[data-theme="champagne"] {
+body[data-theme="golden"] {
     background: rgb(111,29,27);
     background: linear-gradient(0deg, rgba(111,29,27,1) 80%, rgba(78,20,19,1) 90%, rgba(45,11,11,1) 95%);
     color: #ffe8b4;
 }
 
-.logo-champagne {
-    background-image: url('imagens/logo-champagne.png');
+.logo-golden {
+    background-image: url('imagens/logo-golden.png');
     width: 40px;
     height: 40px;
     background-size: cover;
@@ -18,39 +18,39 @@ body[data-theme="champagne"] {
     display: inline-block;
 }
 
-.navbar-champagne {
+.navbar-golden {
     background-color: #a27c3f;
     color: #FFE6A7;
 }
-.navbar-champagne .navbar-brand,
-.navbar-champagne .navbar-nav .nav-link,
-.navbar-champagne .navbar-toggler-icon {
+.navbar-golden .navbar-brand,
+.navbar-golden .navbar-nav .nav-link,
+.navbar-golden .navbar-toggler-icon {
     color: #FFE6A7;
 }
-.navbar-champagne .navbar-brand:hover,
-.navbar-champagne .navbar-nav .nav-link:hover,
-.navbar-champagne .navbar-brand:focus,
-.navbar-champagne .navbar-nav .nav-link:focus {
+.navbar-golden .navbar-brand:hover,
+.navbar-golden .navbar-nav .nav-link:hover,
+.navbar-golden .navbar-brand:focus,
+.navbar-golden .navbar-nav .nav-link:focus {
     color: #FFD700;
 }
 
-.jumbotron-champagne {
+.jumbotron-golden {
     background-color: #BB9457;
     color: #3d130c;
 }
-.destaque-champagne {
+.destaque-golden {
     background-color: #FFD700;
     font-family: 'Courier New', Courier, monospace; 
     color: black;
     padding: 0px 5px;
 }
 
-.main-champagne {
+.main-golden {
     background: rgb(111,29,27);
     background: linear-gradient(0deg, rgba(111,29,27,1) 80%, rgba(78,20,19,1) 90%, rgba(45,11,11,1) 95%);
     color: #ffe8b4;
 
-    background-image: url('imagens/champ2.png');
+    background-image: url('imagens/champs.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,12 +58,12 @@ body[data-theme="champagne"] {
     filter: brightness(0.8);
 }
 
-.footer-champagne {
+.footer-golden {
     background-color: #502429;
     color: #ffe8b4;
 }
 
-.carta-champagne {
+.carta-golden {
     border-radius: 15px;
     backdrop-filter: sepia(20%);
     background-color: rgba(0, 0, 0, 0.3);
@@ -199,13 +199,16 @@ body[data-theme="taiga"] {
 }
 
 
-
-
 /* blur */
 .blur-card {
     border-radius: 15px;
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+}
+
+.card-neutro {
+    border-radius: 15px;
     padding: 10px;
 }
 

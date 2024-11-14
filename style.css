@@ -119,3 +119,57 @@ footer {
 .navbar-nav .nav-link.active {
     color: inherit; /* Ou outra cor */
 }
+
+
+
+/* Estilos padrão para o carrossel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor escura para modo claro */
+    border-radius: 50%;
+}
+
+.carousel-caption h5, .carousel-caption p {
+    color: #fff; /* Texto claro para modo escuro */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Melhor visibilidade em imagens claras */
+}
+
+/* Estilos para tema claro */
+[data-theme="light"] .carousel-control-prev-icon,
+[data-theme="light"] .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Ícones escuros */
+}
+
+/* Estilos para tema escuro */
+[data-theme="dark"] .carousel-control-prev-icon,
+[data-theme="dark"] .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Ícones escuros */
+}
+
+[data-theme="dark"] .carousel-caption h5,
+[data-theme="dark"] .carousel-caption p {
+    color: #fff;
+}
+
+/* Ajustes para temas personalizados */
+[data-theme="golden"] .carousel-control-prev-icon,
+[data-theme="golden"] .carousel-control-next-icon,
+[data-theme="coast"] .carousel-control-prev-icon,
+[data-theme="coast"] .carousel-control-next-icon,
+[data-theme="taiga"] .carousel-control-prev-icon,
+[data-theme="taiga"] .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Escolha uma cor que contraste bem */
+}
+
+/* Cards de carossel */
+.carro-card {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+.carro-card:hover {
+    transform: scale(1.01);
+    z-index: 1;
+}
+.carro-card:not(:hover) {
+    filter: brightness(0.9);
+}

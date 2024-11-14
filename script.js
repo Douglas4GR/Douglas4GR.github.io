@@ -2,6 +2,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const activeModeText = document.getElementById("activeModeText");
     const metaThemeColor = document.getElementById("meta-theme-color");
 
+    // Mensagens para cada tema no footer
+    const footerMessages = {
+        light: "“Portanto, não vos inquieteis com o dia de amanhã, pois o amanhã trará suas próprias preocupações. Basta a cada dia o seu mal.” (Mateus 6, 34)",
+        dark: "“Falou-lhes, pois, Jesus outra vez, dizendo: Eu sou a luz do mundo; quem me segue não andará em trevas, mas terá a luz da vida.” (João 8, 12)",
+        golden: "“Porque para Deus nada é impossível” (Lucas 1, 37)",
+        coast: "“A tua palavra é lâmpada que ilumina os meus passos e luz que clareia o meu caminho.” (Salmo 119, 105)",
+        taiga: "“Venham a mim, todos os que estão cansados e sobrecarregados, e eu darei descanso a vocês. Tomem sobre vocês o meu jugo e aprendam de mim, pois sou manso e humilde de coração, e vocês encontrarão descanso para as suas almas. Pois o meu jugo é suave e o meu fardo é leve.” (Mateus 11, 28-30)"
+    };
+    // Função para atualizar o texto do footer
+    function updateFooterText(theme) {
+        const footerText = document.querySelector("footer p");
+        if (footerText) {
+            footerText.textContent = footerMessages[theme] || "“Portanto, não vos inquieteis com o dia de amanhã, pois o amanhã trará suas próprias preocupações. Basta a cada dia o seu mal.” (Mateus 6, 34)";
+        }
+    }
+
     // Função para aplicar o tema selecionado
     function applyTheme(theme) {
         document.body.setAttribute("data-theme", theme);
@@ -19,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 navbar: "navbar-light bg-light", 
                 jumbotron: "bg-light", 
                 main: "",
-                carta: "",
+                carta: "card-neutro",
                 footer: "bg-dark", 
                 metaColor: "#ffffff", 
                 em: "destaque-blackwhite", 
@@ -29,27 +45,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 navbar: "navbar-dark bg-dark dark", 
                 jumbotron: "bg-dark", 
                 main: "",
-                carta: "",
+                carta: "card-neutro",
                 footer: "bg-dark", 
                 metaColor: "#333333", 
                 em: "destaque-blackwhite", 
                 logo: "logo-blackwhite",
             },
-            champagne: { 
-                navbar: "navbar-champagne navbar-dark", 
-                jumbotron: "jumbotron-champagne", 
-                main: "main-champagne",
-                carta: "carta-champagne", 
-                footer: "footer-champagne", 
+            golden: { 
+                navbar: "navbar-golden navbar-dark", 
+                jumbotron: "jumbotron-golden", 
+                main: "main-golden",
+                carta: "carta-golden", 
+                footer: "footer-golden", 
                 metaColor: "#99582A", 
-                em: "destaque-champagne", 
-                logo: "logo-champagne",
+                em: "destaque-golden", 
+                logo: "logo-golden",
             },
             coast: { 
-                navbar: "navbar-light navbar-coast", 
+                navbar: "navbar-light navbar-coast",    
                 jumbotron: "jumbotron-coast", 
                 main: "main-coast",
-                carta: "carta-coast", 
+                carta: "card-neutro", 
                 footer: "footer-coast", 
                 metaColor: "#5E503F", 
                 em: "destaque-coast", 
@@ -79,13 +95,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (em) em.className = `${settings.em}`;
             if (logo) {
-                logo.classList.remove("logo-blackwhite", "logo-champagne", "logo-coast", "logo-taiga");
+                logo.classList.remove("logo-blackwhite", "logo-golden", "logo-coast", "logo-taiga");
                 logo.classList.add(settings.logo);
             }
 
             cartas.forEach(carta => {
                 carta.className = `carta ${settings.carta}`;
             });
+
+            // Atualiza o texto do footer com base no tema selecionado
+            updateFooterText(theme);
         }
     }
 

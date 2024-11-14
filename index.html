@@ -26,8 +26,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#social-media">Redes</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#social-media">Redes</a></li>
                     <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#themeModal" id="activeModeText">Alterar Tema</a></li>
                 </ul>                                            
             </div>
@@ -48,10 +48,79 @@
                     <section id="about" class="container py-5 px-1">
                         <div class="carta">
                             <h2 class="text-center mb-4">Sobre Mim</h2>
-                            <p class="text-center">Ainda tenho que pensar...</p>
+                            <p class="text-center">
+                                Trabalho como desenvolvedor back-end e também como designer de experiência / interface de usuários.
+                            </p>
+                            <p>
+                                Nas horas vagas gosto de aprender sobre tudo e como tudo se conecta, desde que você encontre a conexão, inclusive já palestrei e adoro conversar sobre 
+                                (e sim, dinossauros e IA estão mais conectados do que imagina).
+                                Com isso dito pode-se concluir que adoro estudar história, filosofia, teologia, geografia, física, e assim por diante...
+                            </p>
+                            <p>
+                                Sim, tenho hobbies mais "interessantes" do que aprender, também gosto muito de trocar ideias, jogar videogames, ouvir/cantar músicas
+                                convergindo gêneros, e as vezes faço transmissões ao vivo, gravo vídeos e músicas, desenvolvo jogos e edito fotos por diversão.
+                            </p>
+                            <p class="text-center">
+                                Em suma, acredito que a chave de tudo está na junção das peças do conhecimento, e te dou o direito à interpretação.
+                            </p>
                         </div>
                     </section>
     
+                    <!-- Portfólio -->
+                    <section id="portfolio" class="container py-5 px-1">
+                        <div class="carta">
+                            <h2 class="text-center mb-4">Portfólio</h2>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8 col-sm-12">
+                                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carousel-inner carro-card">
+                                            <div class="carousel-item active">
+                                                <a href="https://github.com/Douglas4GR/PortalAdminEmpregados" target="_blank">
+                                                    <img src="imagens/reiAdmin.jpg" class="d-block w-100" alt="reiAdmin">
+                                                    <div class="carousel-caption">
+                                                        <h1>Admnistrador de Funcionários</h1>
+                                                        <p class="d-none d-md-block">Sistema para admnistração de funcionários em pequenas e médias empresas</p>
+                                                    </div>                                    
+                                                </a>
+                                            </div>
+                                            <div class="carousel-item carro-card">
+                                                <a href="https://github.com/Douglas4GR/Marketplace" target="_blank">
+                                                    <img src="imagens/marketplace.jpg" class="d-block w-100" alt="marketplace">
+                                                    <div class="carousel-caption">
+                                                        <h1>Marketplace API</h1>
+                                                        <p class="d-none d-md-block">API Rest de gestão de marketplace.</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="carousel-item carro-card">
+                                                <a href="https://github.com/Douglas4GR/Adot" target="_blank">
+                                                    <img src="imagens/adote.jpg" class="d-block w-100" alt="adote">
+                                                    <div class="carousel-caption">
+                                                        <h1>Adote Animais!</h1>
+                                                        <p class="d-none d-md-block">Sistema para facilitar adoção de pets.</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                     <!-- Redes Sociais -->
                     <section id="social-media" class="container my-5 px-1">
                         <div class="carta">
@@ -59,7 +128,7 @@
                             <div class="row justify-content-center">
                                 <!-- Cards das redes sociais com classes para estilos específicos -->
                                 <div class="col-md-3 col-6 mb-3">
-                                    <a href="https://www.instagram.com/seuusuario" target="_blank" class="social-card instagram-card">
+                                    <a href="https://www.instagram.com/douglas.jail" target="_blank" class="social-card instagram-card">
                                         <div class="card text-center">
                                             <div class="card-body">
                                                 <h5 class="card-title">Instagram</h5>
@@ -68,7 +137,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-3 col-6 mb-3">
-                                    <a href="https://www.twitch.tv/seuusuario" target="_blank" class="social-card twitch-card">
+                                    <a href="https://www.twitch.tv/douglas_foroca" target="_blank" class="social-card twitch-card">
                                         <div class="card text-center">
                                             <div class="card-body">
                                                 <h5 class="card-title">Twitch</h5>
@@ -77,7 +146,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-3 col-6 mb-3">
-                                    <a href="https://www.linkedin.com/in/seuusuario" target="_blank" class="social-card linkedin-card">
+                                    <a href="http://www.linkedin.com/in/douglas4gr" target="_blank" class="social-card linkedin-card">
                                         <div class="card text-center">
                                             <div class="card-body">
                                                 <h5 class="card-title">LinkedIn</h5>
@@ -86,7 +155,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-3 col-6 mb-3">
-                                    <a href="https://www.github.com/seuusuario" target="_blank" class="social-card github-card">
+                                    <a href="https://github.com/Douglas4GR" target="_blank" class="social-card github-card">
                                         <div class="card text-center">
                                             <div class="card-body">
                                                 <h5 class="card-title">Github</h5>
@@ -98,23 +167,6 @@
                         </div>
                     </section>
     
-                    <!-- Portfólio -->
-                    <section id="portfolio" class="container py-5 px-1">
-                        <div class="carta">
-                            <h2 class="text-center mb-4">Portfólio</h2>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="card mb-4">
-                                        <img src="assets/projeto1.jpg" class="card-img-top" alt="Projeto 1">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Projeto 1</h5>
-                                            <p class="card-text">Descrição breve do projeto.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
                 </div>
             </div>
         </div>
@@ -143,7 +195,7 @@
                 <div class="modal-body">
                     <button class="btn btn-theme btn-outline-light" data-theme="light">Light</button>
                     <button class="btn btn-theme btn-outline-light" data-theme="dark">Dark</button>
-                    <button class="btn btn-theme btn-outline-light" data-theme="champagne">Champagne</button>
+                    <button class="btn btn-theme btn-outline-light" data-theme="golden">Golden</button>
                     <button class="btn btn-theme btn-outline-light" data-theme="coast">Coast</button>
                     <button class="btn btn-theme btn-outline-light" data-theme="taiga">Taiga</button>
                 </div>
