@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Mensagens para cada tema no footer
     const footerMessages = {
-        light: "“Portanto, não vos inquieteis com o dia de amanhã, pois o amanhã trará suas próprias preocupações. Basta a cada dia o seu mal.” (Mateus 6, 34)",
-        dark: "“Falou-lhes, pois, Jesus outra vez, dizendo: Eu sou a luz do mundo; quem me segue não andará em trevas, mas terá a luz da vida.” (João 8, 12)",
+        dark: "“Portanto, não vos inquieteis com o dia de amanhã, pois o amanhã trará suas próprias preocupações. Basta a cada dia o seu mal.” (Mateus 6, 34)",
+        light: "“Falou-lhes, pois, Jesus outra vez, dizendo: Eu sou a luz do mundo; quem me segue não andará em trevas, mas terá a luz da vida.” (João 8, 12)",
         golden: "“Porque para Deus nada é impossível” (Lucas 1, 37)",
         coast: "“A tua palavra é lâmpada que ilumina os meus passos e luz que clareia o meu caminho.” (Salmo 119, 105)",
         taiga: "“Venham a mim, todos os que estão cansados e sobrecarregados, e eu darei descanso a vocês. Tomem sobre vocês o meu jugo e aprendam de mim, pois sou manso e humilde de coração, e vocês encontrarão descanso para as suas almas. Pois o meu jugo é suave e o meu fardo é leve.” (Mateus 11, 28-30)"
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (footer) footer.className = `text-center py-4 ${settings.footer}`;
             if (main) main.className = `${settings.main}`;
             if (metaThemeColor) metaThemeColor.setAttribute("content", settings.metaColor);
-            if (activeModeText) activeModeText.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
+            if (activeModeText) activeModeText.textContent = theme.charAt(0).toUpperCase() + theme.slice(1) + " Mode";
 
             if (em) em.className = `${settings.em}`;
             if (logo) {
