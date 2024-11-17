@@ -4,9 +4,8 @@
 }
 
 body[data-theme="golden"] {
-    background: rgb(111,29,27);
-    background: linear-gradient(0deg, rgba(111,29,27,1) 80%, rgba(78,20,19,1) 90%, rgba(45,11,11,1) 95%);
-    color: #ffe8b4;
+    background-color: #a27c3f;
+
 }
 
 .logo-golden {
@@ -79,9 +78,7 @@ body[data-theme="golden"] {
 }
 
 body[data-theme="coast"] {
-    background: rgb(7,11,13);
-    background: linear-gradient(0deg, rgba(7,11,13,1) 0%, rgba(22,35,41,1) 20%, rgba(22,35,41,1) 80%, rgba(7,11,13,1) 100%);
-    color: #acdcf4;
+    background-color: #C6AC8F;
 }
 
 .logo-coast {
@@ -142,7 +139,7 @@ body[data-theme="coast"] {
 }
 
 body[data-theme="taiga"] {
-    background-color: #DDA15E;
+    background-color: #283618;
     color: #17110b;
 }
 
