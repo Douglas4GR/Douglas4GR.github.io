@@ -1,0 +1,79 @@
+/* Estilos Globais */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body[data-theme="dark"] .navbar, 
+body[data-theme="dark"] .jumbotron,
+footer {
+    background-color: #343a40; /* cor escura */
+    color: #ffffff; /* texto claro */
+}
+
+.jumbotron {
+    padding: 4rem 2rem;
+}
+
+/* Cards de redes sociais */
+.social-card {
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.social-card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+.social-card:not(:hover) {
+    filter: brightness(0.7);
+}
+
+.social-card .card {
+    color: #ffffff;
+    font-size: 1.2rem;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-card .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Carrossel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor escura para modo claro */
+    border-radius: 50%;
+}
+
+.carousel-caption h5, .carousel-caption p {
+    color: #fff; /* Texto claro para modo escuro */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Melhor visibilidade em imagens claras */
+}
+
+/* Estilo padrão para botões de alternância de tema */
+.btn-theme {
+    width: 100px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Modal */
+.modal-body {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}

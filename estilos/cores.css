@@ -1,0 +1,110 @@
+/* Tema Claro */
+body[data-theme="light"] {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Tema Escuro */
+body[data-theme="dark"] {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.destaque-blackwhite {
+    background-color: rgb(191, 253, 147);
+    font-family: 'Courier New', Courier, monospace; 
+    color: black;
+    padding: 0px 5px;
+}
+
+/* Estilo da logo */
+.logo-blackwhite {
+    background-image: url('../imagens/logos/logo-sem-fundo.png');
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+
+/* Tema Taiga */
+body[data-theme="dg"] {
+    background-color: #283618;
+    color: #17110b;
+}
+
+.logo-dg {
+    background-image: url('../imagens/logos/logo-douglas.png');
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+
+.navbar-dg {
+    background-color: #283618;
+    color: #f1f9d7;
+}
+
+.navbar-dg .navbar-brand,
+.navbar-dg .navbar-nav .nav-link,
+.navbar-dg .navbar-toggler-icon {
+    color: #f1f9d7;
+}
+
+.navbar-dg .navbar-brand:hover,
+.navbar-dg .navbar-nav .nav-link:hover,
+.navbar-dg .navbar-brand:focus,
+.navbar-dg .navbar-nav .nav-link:focus {
+    color: #cbe575;
+}
+
+.jumbotron-dg {
+    background-color: #606C38;
+    color: white;
+}
+
+.destaque-dg {
+    background-color: #d2ee75;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    padding: 0px 5px;
+}
+
+.main-dg {
+    background-image: url('../imagens/taiga.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #DDA15E;
+    color: #ffffff;
+    text-shadow: #000000 1px 0 5px;
+}
+
+.footer-dg {
+    background-color: #BC6C25;
+}
+
+/* Botões Escuros */
+.btn-escuro {
+    color: #343a40; /* Texto de cor escura */
+    border-color: #343a40; /* Borda de cor escura */
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.btn-escuro:hover {
+    color: #fff; /* Texto branco no hover */
+    background-color: #343a40; /* Fundo escuro no hover */
+    border-color: #343a40; /* Borda escura no hover */
+}
+
+.btn-escuro:focus, .btn-escuro.focus {
+    box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); /* Sombra de foco */
+}
+
+.btn-escuro.disabled, .btn-escuro:disabled {
+    color: #343a40; /* Texto de cor escura */
+    background-color: rgba(255, 255, 255, 0.2);
+}

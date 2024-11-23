@@ -1,0 +1,34 @@
+.carousel-caption h5, .carousel-caption p {
+    color: #fff; /* Texto claro para modo escuro */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Cards de redes sociais */
+.instagram-card .card {
+    background-image: url('../imagens/perfis/perfil-insta.jpg');
+}
+
+.linkedin-card .card {
+    background-image: url('../imagens/perfis/perfil-linkedin.jpg');
+}
+
+.twitch-card .card {
+    background-image: url('../imagens/perfis/perfil-twitch.jpg');
+}
+
+.github-card .card {
+    background-image: url('../imagens/perfis/perfil-github.png');
+}
+
+/* Blur Cards */
+.blur-card {
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 10px;
+}
+
+.card-neutro {
+    border-radius: 15px;
+    padding: 10px;
+}
