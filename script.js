@@ -2,19 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const activeModeText = document.getElementById("activeModeText");
     const metaThemeColor = document.getElementById("meta-theme-color");
 
-    const footerMessages = {
-        dark: "“Portanto, não vos inquieteis com o dia de amanhã, pois o amanhã trará suas próprias preocupações. Basta a cada dia o seu mal.” (Mateus 6, 34)",
-        light: "“A tua palavra é lâmpada que ilumina os meus passos e luz que clareia o meu caminho.” (Salmo 119, 105)",
-        dg: "“Venham a mim, todos os que estão cansados e sobrecarregados, e eu darei descanso a vocês. Tomem sobre vocês o meu jugo e aprendam de mim, pois sou manso e humilde de coração, e vocês encontrarão descanso para as suas almas. Pois o meu jugo é suave e o meu fardo é leve.” (Mateus 11, 28-30)"
-    };
-
-    function updateFooterText(theme) {
-        const footerText = document.querySelector("footer p");
-        if (footerText) {
-            footerText.textContent = footerMessages[theme] || "“Portanto, não vos inquieteis com o dia de amanhã, pois o amanhã trará suas próprias preocupações. Basta a cada dia o seu mal.” (Mateus 6, 34)";
-        }
-    }
-
     function applyTheme(theme) {
         document.body.setAttribute("data-theme", theme);
         const navbar = document.querySelector("nav");
@@ -31,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 jumbotron: "bg-light", 
                 main: "",
                 carta: "card-neutro",
-                footer: "bg-dark", 
+                footer: "bg-light text-dark", 
                 metaColor: "#ffffff", 
                 em: "destaque-blackwhite", 
                 logo: "logo-blackwhite",
@@ -61,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const settings = colorSettings[theme];
 
         if (settings) {
-            if (navbar) navbar.className = `navbar navbar-expand-lg ${settings.navbar}`;
+            if (navbar) navbar.className = `navbar navbar-expand-lg fixed-top ${settings.navbar}`;
             if (jumbotron) jumbotron.className = `jumbotron text-center ${settings.jumbotron}`;
             if (footer) footer.className = `text-center py-4 ${settings.footer}`;
             if (main) main.className = `${settings.main}`;
@@ -79,8 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
             cartas.forEach(carta => {
                 carta.className = `carta ${settings.carta}`;
             });
-
-            updateFooterText(theme);
         }
         localStorage.setItem('tema', theme);
     }

@@ -51,17 +51,6 @@ footer {
     height: 100%;
 }
 
-/* Carrossel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); /* Cor escura para modo claro */
-    border-radius: 50%;
-}
-
-.carousel-caption h5, .carousel-caption p {
-    color: #fff; /* Texto claro para modo escuro */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Melhor visibilidade em imagens claras */
-}
 
 /* Estilo padrão para botões de alternância de tema */
 .btn-theme {
@@ -76,4 +65,110 @@ footer {
     display: flex;
     justify-content: space-around;
     gap: 10px;
+}
+
+
+/* Container principal do portfólio */
+.portfolio-card {
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.portfolio-item {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagem e overlay */
+.image-container {
+    position: relative;
+    width: 60%; /* Proporção para 16:9 */
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-sizing: initial;
+}
+
+.overlay-text {
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+/* Descrição */
+.description {
+    width: 40%; /* Complementar ao width da imagem */
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex-direction: column;
+    }
+
+    .image-container,
+    .description {
+        width: 100%;
+    }
+}
+
+
+main a {
+    color: inherit;
+    text-decoration: none;
+}
+
+main a:hover {
+    color: inherit;
+}
+
+.opaco {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+.opaco:hover {
+    opacity: 1;
+    text-decoration: rgb(191, 253, 147) wavy underline;
 }

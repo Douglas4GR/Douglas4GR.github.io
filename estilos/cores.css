@@ -86,25 +86,3 @@ body[data-theme="dg"] {
 .footer-dg {
     background-color: #BC6C25;
 }
-
-/* Botões Escuros */
-.btn-escuro {
-    color: #343a40; /* Texto de cor escura */
-    border-color: #343a40; /* Borda de cor escura */
-    background-color: rgba(0, 0, 0, 0.15);
-}
-
-.btn-escuro:hover {
-    color: #fff; /* Texto branco no hover */
-    background-color: #343a40; /* Fundo escuro no hover */
-    border-color: #343a40; /* Borda escura no hover */
-}
-
-.btn-escuro:focus, .btn-escuro.focus {
-    box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); /* Sombra de foco */
-}
-
-.btn-escuro.disabled, .btn-escuro:disabled {
-    color: #343a40; /* Texto de cor escura */
-    background-color: rgba(255, 255, 255, 0.2);
-}
