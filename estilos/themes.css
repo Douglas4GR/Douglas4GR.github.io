@@ -28,3 +28,11 @@ body[data-theme="dark"] {
     background-position: center;
     display: inline-block;
 }
+
+/* Estilo neutro para cartas */
+.card-neutro {
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+}
