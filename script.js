@@ -1,89 +1,71 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const activeModeText = document.getElementById("activeModeText");
     const metaThemeColor = document.getElementById("meta-theme-color");
 
+    const themes = {
+        light: {
+            navbar: "navbar-light bg-light",
+            jumbotron: "bg-light",
+            footer: "bg-light text-dark",
+            metaColor: "#ffffff",
+            em: "destaque",
+            logo: "logo-blackwhite"
+        },
+        dark: {
+            navbar: "navbar-dark bg-dark",
+            jumbotron: "bg-dark",
+            footer: "bg-dark text-light",
+            metaColor: "#1e1e1e",
+            em: "destaque",
+            logo: "logo-blackwhite"
+        }
+    };
+
     function applyTheme(theme) {
+        const settings = themes[theme] || themes.light;
         document.body.setAttribute("data-theme", theme);
+
         const navbar = document.querySelector("nav");
         const jumbotron = document.querySelector(".jumbotron");
         const footer = document.querySelector("footer");
-        const ems = document.querySelectorAll("em");
         const logo = document.querySelector(".logo");
-        const main = document.querySelector("main");
+        const ems = document.querySelectorAll("em");
         const cartas = document.querySelectorAll(".carta");
 
-        const colorSettings = {
-            light: { 
-                navbar: "navbar-light bg-light", 
-                jumbotron: "bg-light", 
-                main: "",
-                carta: "card-neutro",
-                footer: "bg-light text-dark", 
-                metaColor: "#ffffff", 
-                em: "destaque-blackwhite", 
-                logo: "logo-blackwhite",
-            },
-            dark: { 
-                navbar: "navbar-dark bg-dark dark", 
-                jumbotron: "bg-dark", 
-                main: "",
-                carta: "card-neutro",
-                footer: "bg-dark", 
-                metaColor: "#333333", 
-                em: "destaque-blackwhite", 
-                logo: "logo-blackwhite",
-            },
-            dg: { 
-                navbar: "navbar-dark navbar-dg", 
-                jumbotron: "jumbotron-dg", 
-                main: "main-dg",
-                carta: "blur-card", 
-                footer: "footer-dg", 
-                metaColor: "#BC6C25", 
-                em: "destaque-dg", 
-                logo: "logo-dg",
-            },
-        };
+        navbar.className = `navbar navbar-expand-lg fixed-top ${settings.navbar}`;
+        jumbotron.className = `jumbotron text-center shadow ${settings.jumbotron}`;
+        footer.className = `text-center py-4 ${settings.footer}`;
+        metaThemeColor.setAttribute("content", settings.metaColor);
+        activeModeText.textContent = theme.charAt(0).toUpperCase() + theme.slice(1) + " Mode";
 
-        const settings = colorSettings[theme];
+        logo.className = "logo " + settings.logo;
+        ems.forEach(em => em.className = settings.em);
+        cartas.forEach(carta => carta.className = "carta card-neutro");
+        
+        localStorage.setItem("tema", theme);
+    }
 
-        if (settings) {
-            if (navbar) navbar.className = `navbar navbar-expand-lg fixed-top ${settings.navbar}`;
-            if (jumbotron) jumbotron.className = `jumbotron text-center ${settings.jumbotron}`;
-            if (footer) footer.className = `text-center py-4 ${settings.footer}`;
-            if (main) main.className = `${settings.main}`;
-            if (metaThemeColor) metaThemeColor.setAttribute("content", settings.metaColor);
-            if (activeModeText) activeModeText.textContent = theme.charAt(0).toUpperCase() + theme.slice(1) + " Mode";
+    function loadTheme() {
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const saved = localStorage.getItem("tema");
+        const theme = saved || (systemDark ? "dark" : "light");
+        applyTheme(theme);
+    }
 
-            if (logo) {
-                logo.classList.remove("logo-blackwhite", "logo-golden", "logo-coast", "logo-dg");
-                logo.classList.add(settings.logo);
-            }
+    loadTheme();
 
-            ems.forEach(em => {
-                em.className = `${settings.em}`;
-            });
-            cartas.forEach(carta => {
-                carta.className = `carta ${settings.carta}`;
-            });
+    // Listener para mudança de tema do sistema
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+        if (!localStorage.getItem("tema")) {
+            applyTheme(e.matches ? "dark" : "light");
         }
-        localStorage.setItem('tema', theme);
-    }
+    });
 
-    function carregarTema() {
-        const temaSistema = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
-        const temaAtual = localStorage.getItem('tema') || temaSistema || 'dg';
-        applyTheme(temaAtual);
-    }
-    carregarTema();
-
-    document.querySelectorAll(".btn-theme").forEach(button => {
-        button.addEventListener("click", function () {
-            const selectedTheme = this.getAttribute("data-theme");
-            applyTheme(selectedTheme);
-
-            const themeModal = bootstrap.Modal.getInstance(document.getElementById("themeModal"));
-            themeModal.hide();
+    document.querySelectorAll(".btn-theme").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const theme = btn.getAttribute("data-theme");
+            applyTheme(theme);
+            bootstrap.Modal.getInstance(document.getElementById("themeModal"))?.hide();
         });
     });
 });

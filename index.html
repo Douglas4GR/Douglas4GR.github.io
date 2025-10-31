@@ -10,13 +10,12 @@
     <link rel="stylesheet" href="estilos/cores.css">
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="icon" href="imagens/logos/favicon.ico" type="image/x-icon">
-    <!-- Meta tag para o tema atual -->
     <meta name="theme-color" content="#ffffff" id="meta-theme-color">
 </head>
 <body data-theme="light">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <div class="logo"></div>
@@ -26,12 +25,12 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#social-media">Redes</a></li>
                     <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#themeModal" id="activeModeText">Alterar Tema</a></li>
-                </ul>                                            
+                </ul>
             </div>
         </div>
     </nav>
@@ -39,7 +38,7 @@
     <!-- Jumbotron -->
     <header class="jumbotron text-center shadow">
         <h1 class="display-4">Prazer, meu nome é Douglas</h1>
-        <p class="lead">Garanto que esta frase ficará <em class="destaque"> marcada</em> em sua memória.</p>
+        <p class="lead">Se chegou até <em class="destaque"> aqui</em> significa que quer saber um pouco mais...</p>
     </header>
 
     <main>
@@ -49,196 +48,96 @@
                     <!-- Sobre Mim -->
                     <section id="about" class="container bloco py-5 px-1">
                         <div class="carta">
-                            <h2 class="text-center mb-4">Sobre Mim</h2>
+                            <h2 class="text-center mb-4">...<em class="destaque">Sobre Mim</em></h2>
                             <p class="text-center">
                                 Um apaixonado por tecnologias, desenvolvedor back-end e também UX/UI designer.
                             </p>
-                            <p>
-                                Nas horas vagas gosto de aprender sobre tudo e como tudo se conecta, desde que você encontre a conexão, inclusive já palestrei e adoro conversar sobre 
-                                (e sim, dinossauros e IA estão mais conectados do que imagina).
-                                Com isso dito pode-se concluir que adoro estudar história, filosofia, teologia, geografia, física, e assim por diante...
-                            </p>
-                            <p>
-                                Sim, tenho hobbies mais "interessantes" do que aprender, também gosto muito de trocar ideias, jogar videogames, ouvir/cantar músicas
-                                convergindo gêneros, e as vezes faço transmissões ao vivo, gravo vídeos e músicas, desenvolvo jogos e edito fotos por diversão.
-                            </p>
-                            <p class="text-center">
-                                Em suma, acredito que a chave de tudo está na junção das peças do conhecimento, e te dou o direito à interpretação.
-                            </p>
                         </div>
                     </section>
-    
+
                     <!-- Portfólio -->
                     <section id="portfolio" class="container bloco py-5 px-1">
                         <div class="carta">
                             <h2 class="text-center mb-4">Portfólio</h2>
-                            <!-- portfolio do back -->
-                             <article>
+                            <!-- Back-end -->
+                            <article>
                                 <div class="row mb-4 align-items-baseline">
-                                    <div class="col-auto">
-                                        <h3>Back-end</h3>
-                                    </div>
-                                    <div class="col-auto opaco" style="padding: 0%;">
-                                        <a class=" botao" data-bs-toggle="collapse" href="#collapseBack" role="button" aria-expanded="false" aria-controls="collapseBack">
+                                    <div class="col-auto"><h3>Back-end</h3></div>
+                                    <div class="col-auto opaco">
+                                        <a class="botao" data-bs-toggle="collapse" href="#collapseBack" role="button">
                                             Ver tudo
                                         </a>
                                     </div>
                                 </div>
                                 <div class="portfolio-container row">
-                                    <!-- Projeto 1 -->
                                     <div class="col-md-6 col-lg-4 mb-4">
                                         <a href="https://github.com/Douglas4GR/PortalAdminEmpregados" target="_blank" class="portfolio-card">
                                             <div class="portfolio-item">
                                                 <div class="image-container">
                                                     <img src="imagens/projetos/reiAdmin.jpg" alt="admin">
-                                                    <div class="overlay">
-                                                        <h5 class="overlay-text">
-                                                            Admnistrador de Funcionários
-                                                        </h5>
-                                                    </div>
+                                                    <div class="overlay"><h5 class="overlay-text">Admnistrador de Funcionários</h5></div>
                                                 </div>
                                                 <div class="description">
-                                                    <p>
-                                                        Sistema para admnistração de funcionários em pequenas e médias empresas
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <!-- Projeto 2 -->
-                                    <div class="col-md-6 col-lg-4 mb-4">
-                                        <a href="https://github.com/Douglas4GR/Marketplace" target="_blank" class="portfolio-card">
-                                            <div class="portfolio-item">
-                                                <div class="image-container">
-                                                    <img src="imagens/projetos/marketplace.jpg" alt="marketplace">
-                                                    <div class="overlay">
-                                                        <h5 class="overlay-text">
-                                                            Marketplace API
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                                <div class="description">
-                                                    <p>
-                                                        API Rest de gestão de marketplace.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <!-- Projeto 3 -->
-                                    <div class="col-md-6 col-lg-4 mb-4">
-                                        <a href="https://github.com/Douglas4GR/Adot" target="_blank" class="portfolio-card">
-                                            <div class="portfolio-item">
-                                                <div class="image-container">
-                                                    <img src="imagens/projetos/adote.jpg" alt="adote">
-                                                    <div class="overlay">
-                                                        <h5 class="overlay-text">
-                                                            Adote Animais!
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                                <div class="description">
-                                                    <p>
-                                                        Sistema para facilitar adoção de pets.
-                                                    </p>
+                                                    <p>Sistema para admnistração de funcionários em pequenas e médias empresas</p>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
-                                <!-- Projetos dentro do collapse -->
                                 <div class="collapse" id="collapseBack">
-                                    <div class="portfolio-container row">
-    
-                                    </div>
+                                    <div class="portfolio-container row"></div>
                                 </div>
-                             </article>
-                            <!-- portfolio do front -->
-                             <article class="mt-5">
+                            </article>
+
+                            <!-- Front-end -->
+                            <article class="mt-5">
                                 <div class="row mb-4 align-items-baseline">
-                                    <div class="col-auto">
-                                        <h3>Front-end</h3>
-                                    </div>
-                                    <div class="col-auto opaco" style="padding: 0%;">
-                                        <a class=" botao" data-bs-toggle="collapse" href="#collapseFront" role="button" aria-expanded="false" aria-controls="collapseFront">
+                                    <div class="col-auto"><h3>Front-end</h3></div>
+                                    <div class="col-auto opaco">
+                                        <a class="botao" data-bs-toggle="collapse" href="#collapseFront" role="button">
                                             Ver tudo
                                         </a>
                                     </div>
                                 </div>
                                 <div class="portfolio-container row">
-                                    <!-- Projeto 1 -->
                                     <div class="col-md-6 col-lg-4 mb-4">
                                         <a href="https://douglas4gr.github.io/Old-Portfolio-Page/" target="_blank" class="portfolio-card">
                                             <div class="portfolio-item">
                                                 <div class="image-container">
-                                                    <img src="imagens/projetos/siteAntigo.jpg" alt="admin">
-                                                    <div class="overlay">
-                                                        <h5 class="overlay-text">
-                                                            Versão Antiga
-                                                        </h5>
-                                                    </div>
+                                                    <img src="imagens/projetos/siteAntigo.jpg" alt="site antigo">
+                                                    <div class="overlay"><h5 class="overlay-text">Versão Antiga</h5></div>
                                                 </div>
                                                 <div class="description">
-                                                    <p>
-                                                        Apesar de tudo, ela ainda conta com recursos bacanas que servem como portfolio. 🤷‍♂️
-                                                    </p>
+                                                    <p>Ainda conta com recursos bacanas que servem como portfolio.</p>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
-
                                 </div>
-                                <!-- Projetos dentro do collapse -->
                                 <div class="collapse" id="collapseFront">
-                                    <div class="portfolio-container row">
-    
-                                    </div>
+                                    <div class="portfolio-container row"></div>
                                 </div>
-                             </article>
-                             <p class="text-center mt-3"> Ainda estou no processo de trazer todos os meus projetos para cá, mas você ainda pode encontrá-los no meu GitHub, Link abaixo! 😉</p>
+                            </article>
+                            <p class="text-center mt-3">Ainda estou trazendo todos os projetos. Veja mais no <a href="https://github.com/Douglas4GR" target="_blank">GitHub</a>!</p>
                         </div>
                     </section>
-
 
                     <!-- Redes Sociais -->
                     <section id="social-media" class="container bloco my-5 px-1">
                         <div class="carta">
                             <h2 class="text-center mb-4">Redes Sociais</h2>
                             <div class="row justify-content-center">
-                                <!-- Cards das redes sociais com classes para estilos específicos -->
-                                <div class="col-md-3 col-6 mb-3">
-                                    <a href="https://www.instagram.com/douglas.jail" target="_blank" class="social-card instagram-card">
-                                        <div class="card text-center">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Instagram</h5>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-6 mb-3">
-                                    <a href="https://www.twitch.tv/douglas_foroca" target="_blank" class="social-card twitch-card">
-                                        <div class="card text-center">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Twitch</h5>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
                                 <div class="col-md-3 col-6 mb-3">
                                     <a href="http://www.linkedin.com/in/douglas4gr" target="_blank" class="social-card linkedin-card">
                                         <div class="card text-center">
-                                            <div class="card-body">
-                                                <h5 class="card-title">LinkedIn</h5>
-                                            </div>
+                                            <div class="card-body"><h5 class="card-title">LinkedIn</h5></div>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col-md-3 col-6 mb-3">
                                     <a href="https://github.com/Douglas4GR" target="_blank" class="social-card github-card">
                                         <div class="card text-center">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Github</h5>
-                                            </div>
+                                            <div class="card-body"><h5 class="card-title">Github</h5></div>
                                         </div>
                                     </a>
                                 </div>
@@ -249,28 +148,28 @@
             </div>
         </div>
     </main>
+
     <footer class="text-center py-4">
         <p>Portanto, não vos inquieteis com o dia de amanhã, pois o amanhã trará suas próprias preocupações. Basta a <em>cada dia o seu mal</em>. Mat 6:34</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-</body>
 
-    <!-- Modal de seleção de tema -->
-    <div class="modal fade" id="themeModal" tabindex="-1" aria-labelledby="themeModalLabel" aria-hidden="true">
+    <!-- Modal de Tema -->
+    <div class="modal fade" id="themeModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="themeModalLabel">Escolha um Tema</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    <h5 class="modal-title">Escolha um Tema</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <button class="btn btn-theme btn-outline-light" data-theme="light">Light</button>
                     <button class="btn btn-theme btn-outline-light" data-theme="dark">Dark</button>
-                    <button class="btn btn-theme btn-outline-light" data-theme="dg">Doug</button>
                 </div>
             </div>
         </div>
     </div>
+</body>
 </html>
