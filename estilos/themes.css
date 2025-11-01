@@ -36,3 +36,13 @@ body[data-theme="dark"] {
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(2px);
 }
+
+.translucent-white {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+.translucent-dark {
+    background-color: rgba(33, 37, 41, 0.2);
+    backdrop-filter: blur(4px);
+}

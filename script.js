@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const themes = {
         light: {
-            navbar: "navbar-light bg-light",
+            navbar: "navbar-light translucent-white",
             jumbotron: "bg-light",
             footer: "bg-light text-dark",
             metaColor: "#ffffff",
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             icon: "bi-sun nav-link"
         },
         dark: {
-            navbar: "navbar-dark bg-dark",
+            navbar: "navbar-dark translucent-dark",
             jumbotron: "bg-dark",
             footer: "bg-dark text-light",
             metaColor: "#1e1e1e",
