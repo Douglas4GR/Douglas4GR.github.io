@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página Pessoal</title>
+    <title>Douglas4GR - Página Pessoal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="estilos/themes.css">
     <link rel="stylesheet" href="estilos/main.css">
@@ -15,7 +15,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="#">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <div class="logo"></div>
                 <div class="ms-2">Douglas4GR</div>
             </a>
@@ -25,7 +25,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/portfolio.html">Portfólio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/certificados.html">Certificados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/palestras.html">Palestras</a></li>
                     <li class="nav-item"><a class="nav-link" href="#social-media">Redes</a></li>
                     <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#themeModal" id="activeModeText">Alterar Tema</a></li>
                 </ul>
@@ -36,7 +38,7 @@
     <!-- Jumbotron -->
     <header class="jumbotron text-center shadow">
         <h1 class="display-4">Prazer, meu nome é Douglas</h1>
-        <p class="lead">Se chegou até <em class="destaque"> aqui</em> significa que quer saber um pouco mais...</p>
+        <p class="lead">Desenvolvedor Back-end, UX/UI Designer e Apaixonado por Tecnologia</p>
     </header>
 
     <main>
@@ -46,77 +48,10 @@
                     <!-- Sobre Mim -->
                     <section id="about" class="container bloco py-5 px-1">
                         <div class="carta">
-                            <h2 class="text-center mb-4">...<em class="destaque">Sobre Mim</em></h2>
+                            <h2 class="text-center mb-4">Sobre Mim</h2>
                             <p class="text-center">
-                                Um apaixonado por tecnologias, desenvolvedor back-end e também UX/UI designer.
+                                Sou um desenvolvedor apaixonado por criar soluções tecnológicas impactantes. Com experiência em desenvolvimento back-end e design UX/UI, busco combinar funcionalidade e estética para entregar experiências incríveis. Explore meu <a href="pages/portfolio.html" class="opaco">portfólio</a>, <a href="pages/certificados.html" class="opaco">certificados</a> e <a href="pages/palestras.html" class="opaco">palestras</a> para saber mais!
                             </p>
-                        </div>
-                    </section>
-
-                    <!-- Portfólio -->
-                    <section id="portfolio" class="container bloco py-5 px-1">
-                        <div class="carta">
-                            <h2 class="text-center mb-4">Portfólio</h2>
-                            <!-- Back-end -->
-                            <article>
-                                <div class="row mb-4 align-items-baseline">
-                                    <div class="col-auto"><h3>Back-end</h3></div>
-                                    <div class="col-auto opaco">
-                                        <a class="botao" data-bs-toggle="collapse" href="#collapseBack" role="button">
-                                            Ver tudo
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-container row">
-                                    <div class="col-md-6 col-lg-4 mb-4">
-                                        <a href="https://github.com/Douglas4GR/PortalAdminEmpregados" target="_blank" class="portfolio-card">
-                                            <div class="portfolio-item">
-                                                <div class="image-container">
-                                                    <img src="imagens/projetos/reiAdmin.jpg" alt="admin">
-                                                    <div class="overlay"><h5 class="overlay-text">Admnistrador de Funcionários</h5></div>
-                                                </div>
-                                                <div class="description">
-                                                    <p>Sistema para admnistração de funcionários em pequenas e médias empresas</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="collapse" id="collapseBack">
-                                    <div class="portfolio-container row"></div>
-                                </div>
-                            </article>
-
-                            <!-- Front-end -->
-                            <article class="mt-5">
-                                <div class="row mb-4 align-items-baseline">
-                                    <div class="col-auto"><h3>Front-end</h3></div>
-                                    <div class="col-auto opaco">
-                                        <a class="botao" data-bs-toggle="collapse" href="#collapseFront" role="button">
-                                            Ver tudo
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-container row">
-                                    <div class="col-md-6 col-lg-4 mb-4">
-                                        <a href="https://douglas4gr.github.io/Old-Portfolio-Page/" target="_blank" class="portfolio-card">
-                                            <div class="portfolio-item">
-                                                <div class="image-container">
-                                                    <img src="imagens/projetos/siteAntigo.jpg" alt="site antigo">
-                                                    <div class="overlay"><h5 class="overlay-text">Versão Antiga</h5></div>
-                                                </div>
-                                                <div class="description">
-                                                    <p>Ainda conta com recursos bacanas que servem como portfolio.</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="collapse" id="collapseFront">
-                                    <div class="portfolio-container row"></div>
-                                </div>
-                            </article>
-                            <p class="text-center mt-3">Ainda estou trazendo todos os projetos. Veja mais no <a href="https://github.com/Douglas4GR" target="_blank">GitHub</a>!</p>
                         </div>
                     </section>
 
@@ -138,6 +73,24 @@
                                             <div class="card-body"><h5 class="card-title">Github</h5></div>
                                         </div>
                                     </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Links para Páginas -->
+                    <section id="links" class="container bloco py-5 px-1">
+                        <div class="carta">
+                            <h2 class="text-center mb-4">Explore Mais</h2>
+                            <div class="row justify-content-center">
+                                <div class="col-md-4 col-6 mb-3">
+                                    <a href="pages/portfolio.html" class="btn btn-outline-primary btn-lg w-100 opaco">Portfólio</a>
+                                </div>
+                                <div class="col-md-4 col-6 mb-3">
+                                    <a href="pages/certificados.html" class="btn btn-outline-primary btn-lg w-100 opaco">Certificados</a>
+                                </div>
+                                <div class="col-md-4 col-6 mb-3">
+                                    <a href="pages/palestras.html" class="btn btn-outline-primary btn-lg w-100 opaco">Palestras</a>
                                 </div>
                             </div>
                         </div>
