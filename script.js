@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
             footer: "bg-light text-dark",
             metaColor: "#ffffff",
             em: "destaque",
-            logo: "logo-blackwhite"
+            logo: "logo-blackwhite",
+            icon: "bi-sun nav-link"
         },
         dark: {
             navbar: "navbar-dark bg-dark",
@@ -17,7 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
             footer: "bg-dark text-light",
             metaColor: "#1e1e1e",
             em: "destaque",
-            logo: "logo-blackwhite"
+            logo: "logo-blackwhite",
+            icon: "bi-moon nav-link"
         }
     };
 
@@ -36,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         jumbotron.className = `jumbotron text-center shadow ${settings.jumbotron}`;
         footer.className = `text-center py-4 ${settings.footer}`;
         metaThemeColor.setAttribute("content", settings.metaColor);
-        activeModeText.textContent = theme.charAt(0).toUpperCase() + theme.slice(1) + " Mode";
+        activeModeText.className = `bi ${settings.icon}`;
 
         logo.className = "logo " + settings.logo;
         ems.forEach(em => em.className = settings.em);
