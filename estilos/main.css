@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 /* === Transições Globais === */
 body { transition: background-color 0.3s ease, color 0.3s ease; }
-.jumbotron { padding: 4rem 2rem; }
+.jumbotron { padding:  4rem 2rem 1rem 2rem; }
 
+u {
+    text-decoration: underline;
+    text-decoration-color: rgb(191, 253, 147);
+    text-decoration-style: wavy;
+}
+
+.carta {
+    font-family: 'Poppins', sans-serif;
+}
 /* === Cards de Redes Sociais === */
 .social-card {
     text-decoration: none;

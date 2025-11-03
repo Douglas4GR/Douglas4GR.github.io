@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const activeModeText = document.getElementById("activeModeText");
     const metaThemeColor = document.getElementById("meta-theme-color");
+    const profileImage = document.querySelector(".carta img"); // Seleciona a imagem na div .carta
 
     const themes = {
         light: {
@@ -10,7 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
             metaColor: "#ffffff",
             em: "destaque",
             logo: "logo-blackwhite",
-            icon: "bi-sun nav-link"
+            icon: "bi-sun nav-link",
+            imageSrc: "imagens/perfis/perfil-light.png"
         },
         dark: {
             navbar: "navbar-dark translucent-dark",
@@ -19,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
             metaColor: "#1e1e1e",
             em: "destaque",
             logo: "logo-blackwhite",
-            icon: "bi-moon nav-link"
+            icon: "bi-moon nav-link",
+            imageSrc: "imagens/perfis/perfil-dark.png"
         }
     };
 
@@ -32,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const footer = document.querySelector("footer");
         const logo = document.querySelector(".logo");
         const ems = document.querySelectorAll("em");
-        const cartas = document.querySelectorAll(".carta");
 
         navbar.className = `navbar navbar-expand-lg fixed-top ${settings.navbar}`;
         jumbotron.className = `jumbotron text-center shadow ${settings.jumbotron}`;
@@ -40,9 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
         metaThemeColor.setAttribute("content", settings.metaColor);
         activeModeText.className = `bi ${settings.icon}`;
 
+        if (profileImage) {
+            profileImage.src = settings.imageSrc;
+        }
+
         logo.className = "logo " + settings.logo;
         ems.forEach(em => em.className = settings.em);
-        cartas.forEach(carta => carta.className = "carta card-neutro");
         
         localStorage.setItem("tema", theme);
     }

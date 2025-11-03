@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="icon" href="imagens/logos/favicon.ico" type="image/x-icon">
     <meta name="theme-color" content="#ffffff" id="meta-theme-color">
 </head>
+
 <body data-theme="light">
 
     <!-- Navbar -->
@@ -25,11 +27,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
                     <li class="nav-item"><a class="nav-link" href="pages/portfolio.html">Portfólio</a></li>
                     <li class="nav-item"><a class="nav-link" href="pages/certificados.html">Certificados</a></li>
                     <li class="nav-item"><a class="nav-link" href="pages/palestras.html">Palestras</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#themeModal" id="activeModeText"></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal"
+                            data-bs-target="#themeModal" id="activeModeText"></a></li>
                 </ul>
             </div>
         </div>
@@ -37,71 +39,82 @@
 
     <!-- Jumbotron -->
     <header class="jumbotron text-center shadow">
-        <h1 class="display-4">Prazer, meu nome é Douglas</h1>
-        <p class="lead">Desenvolvedor Back-end, UX/UI Designer e Apaixonado por Tecnologia</p>
+        <h2 class="display-5">Olá, meu nome é Douglas</h2>
+        <p class="lead">Desenvolvedor Back-end, UI Designer e Apaixonado por Desafios!</p>
     </header>
 
     <main>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 mb-5">
-                    <!-- Sobre Mim -->
-                    <section id="about" class="container bloco py-5 px-1">
-                        <div class="carta">
-                            <h2 class="text-center mb-4">Sobre Mim</h2>
-                            <p class="text-center">
-                                Sou um desenvolvedor apaixonado por criar soluções tecnológicas impactantes. Com experiência em desenvolvimento back-end e design UX/UI, busco combinar funcionalidade e estética para entregar experiências incríveis. Explore meu <a href="pages/portfolio.html" class="opaco">portfólio</a>, <a href="pages/certificados.html" class="opaco">certificados</a> e <a href="pages/palestras.html" class="opaco">palestras</a> para saber mais!
-                            </p>
-                        </div>
-                    </section>
-
-                    <!-- Redes Sociais -->
-                    <section id="social-media" class="container bloco my-5 px-1">
-                        <div class="carta">
-                            <h2 class="text-center mb-4">Redes Sociais</h2>
-                            <div class="row justify-content-center">
-                                <div class="col-md-3 col-6 mb-3">
-                                    <a href="http://www.linkedin.com/in/douglas4gr" target="_blank" class="social-card linkedin-card">
-                                        <div class="card text-center">
-                                            <div class="card-body"><h5 class="card-title">LinkedIn</h5></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-6 mb-3">
-                                    <a href="https://github.com/Douglas4GR" target="_blank" class="social-card github-card">
-                                        <div class="card text-center">
-                                            <div class="card-body"><h5 class="card-title">Github</h5></div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Links para Páginas -->
-                    <section id="links" class="container bloco py-5 px-1">
-                        <div class="carta">
-                            <h2 class="text-center mb-4">Explore Mais</h2>
-                            <div class="row justify-content-center">
-                                <div class="col-md-4 col-6 mb-3">
-                                    <a href="pages/portfolio.html" class="btn btn-outline-primary btn-lg w-100 opaco">Portfólio</a>
-                                </div>
-                                <div class="col-md-4 col-6 mb-3">
-                                    <a href="pages/certificados.html" class="btn btn-outline-primary btn-lg w-100 opaco">Certificados</a>
-                                </div>
-                                <div class="col-md-4 col-6 mb-3">
-                                    <a href="pages/palestras.html" class="btn btn-outline-primary btn-lg w-100 opaco">Palestras</a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+        <div class="container-fluid">
+            <!-- Sobre Mim -->
+            <section id="about" class="container bloco mt-5">
+                <div class="carta">
+                    <img class="float-end img-fluid w-50 mx-1" src="imagens/perfis/perfil-light.png" alt="Perfil">
+                    <h2 class="text-center mb-4">Sobre Mim</h2>
+                    <p class="card-text" style="text-align: justify;">
+                        Sou um desenvolvedor apaixonado por criar soluções tecnológicas impactantes. Com
+                        experiência em
+                        desenvolvimento back-end e design UX/UI, busco combinar funcionalidade e estética para
+                        entregar
+                        experiências incríveis. Explore meu <a href="pages/portfolio.html" class="opaco">portfólio</a>,
+                        <a href="pages/certificados.html" class="opaco">certificados</a> e <a
+                            href="pages/palestras.html" class="opaco">palestras</a> para saber mais!
+                    </p>
                 </div>
-            </div>
+            </section>
+            <!-- Links para Páginas -->
+            <section id="links" class="container bloco mt-4">
+                <div class="carta">
+                    <h2 class="text-center mb-4">Explore Mais</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 col-12 mb-3">
+                            <a href="pages/portfolio.html"
+                                class="btn destaque btn-lg w-100 opaco">Portfólio</a>
+                        </div>
+                        <div class="col-md-4 col-12 mb-3">
+                            <a href="pages/certificados.html"
+                                class="btn destaque btn-lg w-100 opaco">Certificados</a>
+                        </div>
+                        <div class="col-md-4 col-12 mb-3">
+                            <a href="pages/palestras.html"
+                                class="btn destaque btn-lg w-100 opaco">Palestras</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Redes Sociais -->
+            <section id="social-media" class="container bloco my-4">
+                <div class="carta">
+                    <h2 class="text-center mb-4">Redes Sociais</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-3 col-6 mb-3">
+                            <a href="http://www.linkedin.com/in/douglas4gr" target="_blank"
+                                class="social-card linkedin-card">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">LinkedIn</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <a href="https://github.com/Douglas4GR" target="_blank" class="social-card github-card">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Github</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
     <footer class="text-center py-4">
-        <p>Portanto, não vos inquieteis com o dia de amanhã, pois o amanhã trará suas próprias preocupações. Basta a <em>cada dia o seu mal</em>. Mat 6:34</p>
+        <p>Portanto, não vos inquieteis com o dia de amanhã, pois o amanhã trará suas próprias preocupações. Basta a
+            <em>cada dia o seu mal</em>. Mat 6:34
+        </p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -123,4 +136,5 @@
         </div>
     </div>
 </body>
+
 </html>
