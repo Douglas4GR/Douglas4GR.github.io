@@ -4,6 +4,7 @@
 body { transition: background-color 0.3s ease, color 0.3s ease; }
 .jumbotron { padding:  4rem 2rem 1rem 2rem; }
 
+/* === Sublinhado === */
 u {
     text-decoration: underline;
     text-decoration-color: rgb(191, 253, 147);
@@ -40,8 +41,7 @@ u {
     justify-content: center;
     align-items: center;
 }
-.linkedin-card .card { background-image: url('../imagens/perfis/perfil-linkedin.jpg'); }
-.github-card .card { background-image: url('../imagens/perfis/perfil-github.png'); }
+
 
 /* === Botões do Modal === */
 .btn-theme {
