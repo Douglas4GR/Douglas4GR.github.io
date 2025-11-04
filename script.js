@@ -42,13 +42,19 @@ document.addEventListener("DOMContentLoaded", () => {
         metaThemeColor.setAttribute("content", settings.metaColor);
         activeModeText.className = `bi ${settings.icon}`;
 
+        metaThemeColor.setAttribute("content", settings.metaColor);
+        const appleStatusBar = document.createElement("meta");
+        appleStatusBar.name = "apple-mobile-web-app-status-bar-style";
+        appleStatusBar.content = settings.metaColor === "#ffffff" ? "default" : "black";
+        document.head.appendChild(appleStatusBar);
+
         if (profileImage) {
             profileImage.src = settings.imageSrc;
         }
 
         logo.className = "logo " + settings.logo;
         ems.forEach(em => em.className = settings.em);
-        
+
         localStorage.setItem("tema", theme);
     }
 
