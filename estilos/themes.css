@@ -17,6 +17,9 @@ body[data-theme="dark"] {
     color: black;
     padding: 0 5px;
     border-radius: 3px;
+    transform: skewX(15deg); /* Corrige a inclinação do texto */
+    border-radius: 5px; /* Bordas ligeiramente arredondadas */
+    transform: skewX(-15deg); /* Inclinção para efeito itálico */
 }
 
 /* Logo */

@@ -1,0 +1,45 @@
+/* === Botões Personalizados em Itálico === */
+.custom-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-style: italic;
+    text-decoration: none;
+    color: #333; /* Cor base para tema claro */
+    background: linear-gradient(45deg, #f0f0f0, #ffffff); /* Gradiente suave */
+    border: 1px solid #ddd; /* Borda sutil */
+    border-radius: 5px; /* Bordas ligeiramente arredondadas */
+    transform: skewX(-15deg); /* Inclinção para efeito itálico */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Ajuste para o texto dentro do botão (desinclinar o texto) */
+.custom-button span {
+    display: inline-block;
+    transform: skewX(15deg); /* Corrige a inclinação do texto */
+}
+
+/* Estilo para tema escuro */
+body[data-theme="dark"] .custom-button {
+    color: #f0f0f0; /* Cor para tema escuro */
+    background: linear-gradient(45deg, #2a2a2a, #3a3a3a); /* Gradiente escuro */
+    border-color: #444;
+}
+
+/* Efeito hover */
+.custom-button:hover {
+    transform: skewX(-15deg) translateY(-2px); /* Levanta o botão no hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #191970; /* Cor de destaque no hover (azul escuro) */
+}
+
+body[data-theme="dark"] .custom-button:hover {
+    color: #87ceeb; /* Azul claro no hover para tema escuro */
+}
+
+/* Remover estilos padrão do Bootstrap dos links */
+a.custom-button {
+    text-decoration: none !important;
+}
