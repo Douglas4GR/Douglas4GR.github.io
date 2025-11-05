@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const activeModeText = document.getElementById("activeModeText");
     const metaThemeColor = document.getElementById("meta-theme-color");
-    const profileImage = document.querySelector(".carta img"); // Seleciona a imagem na div .carta
+    const profileImage = document.getElementById("FotoPerfil"); // Seleciona a imagem na div .carta
 
     const themes = {
         light: {

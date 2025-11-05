@@ -55,6 +55,7 @@ body[data-theme="dark"] {
 @media (max-width: 768px) {
     body {
         -webkit-backdrop-filter: blur(10px); /* Efeito de desfoque na barra, se suportado */
+        backdrop-filter: blur(10px); /* Propriedade padrão para compatibilidade */
         background: inherit; /* Herda a cor do body para consistência */
     }
     /* Tente influenciar a barra inferior (limitado a navegadores compatíveis) */
