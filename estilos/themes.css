@@ -40,6 +40,11 @@ body[data-theme="dark"] {
     backdrop-filter: blur(2px);
 }
 
+    .card-neutro .img {
+        border-top-left-radius: 3%;
+        border-top-right-radius: 3%;
+    }
+
 .translucent-white {
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(4px);
@@ -48,34 +53,4 @@ body[data-theme="dark"] {
 .translucent-dark {
     background-color: rgba(33, 37, 41, 0.2);
     backdrop-filter: blur(4px);
-}
-
-
-/* === Ajustes para Barras do Celular === */
-@media (max-width: 768px) {
-    body {
-        -webkit-backdrop-filter: blur(10px); /* Efeito de desfoque na barra, se suportado */
-        backdrop-filter: blur(10px); /* Propriedade padrão para compatibilidade */
-        background: inherit; /* Herda a cor do body para consistência */
-    }
-    /* Tente influenciar a barra inferior (limitado a navegadores compatíveis) */
-    :root {
-        --bar-color: #ffffff; /* Cor padrão */
-    }
-    body[data-theme="dark"] {
-        --bar-color: #1e1e1e;
-    }
-    @supports (-webkit-overflow-scrolling: touch) {
-        /* Para iOS, tenta aplicar a cor */
-        body::before {
-            content: "";
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50px; /* Aproximação da altura da barra inferior */
-            background: var(--bar-color);
-            z-index: -1;
-        }
-    }
 }
