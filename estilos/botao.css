@@ -1,31 +1,37 @@
-/* === Botões de Navegação Interna com Destaque === */
-.destaque-button {
+.btn-pai {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.5rem; /* Espaço entre ícone e texto */
     padding: 0.75rem 1.5rem;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.2rem; /* Aumenta um pouco para mais destaque */
     text-decoration: none;
-    transform: skewX(20deg); /* Inclinação mais acentuada */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     text-align: center;
 }
 
-/* Corrige a inclinação do conteúdo interno */
-.destaque-button > * {
-    transform: skewX(-20deg); /* Desinclina o texto ou ícones */
+a.btn-pai {
+    text-decoration: none !important;
 }
 
+
+
+/* === Botões de Navegação Interna com Destaque === */
+.destaque-button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    transform: skewX(20deg);
+}
+/* Corrige a inclinação do conteúdo interno */
+.destaque-button > * {
+    transform: skewX(-20deg);
+}
 /* Efeito hover para mais destaque */
 .destaque-button:hover {
     transform: skewX(20deg) translateY(-3px); /* Levanta mais no hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(45deg, #5aa63a, #9de06a); /* Gradiente mais escuro no hover */
+    background: linear-gradient(45deg, #5aa63a, #9de06a);
 }
-
 /* Garante consistência nos temas */
 body[data-theme="dark"] .destaque-button,
 body[data-theme="light"] .destaque-button {
@@ -33,62 +39,40 @@ body[data-theme="light"] .destaque-button {
     background: linear-gradient(45deg, #94d069, #bffd93);
 }
 
-/* Remover estilos padrão do Bootstrap dos links */
-a.destaque-button {
-    text-decoration: none !important;
-}
+
 
 
 /* === Botões Personalizados em Itálico === */
 .custom-button {
-    display: flex; /* Muda para flexbox */
-    align-items: center; /* Centraliza verticalmente ícone e texto */
-    justify-content: center; /* Centraliza horizontalmente */
-    gap: 0.5rem; /* Espaço entre ícone e texto */
-    padding: 0.75rem 1.5rem;
     font-size: 1.1rem;
     font-style: italic;
-    text-decoration: none;
     color: #333;
     background: linear-gradient(45deg, #f0f0f0, #ffffff);
     border: 1px solid #ddd;
     border-radius: 5px;
     transform: skewX(-15deg);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    text-align: center;
-    width: 100%; /* Garante que ocupe a coluna inteira */
+    width: 100%;
 }
-
 /* Corrige a inclinação do conteúdo interno */
 .custom-button > * {
-    transform: skewX(15deg); /* Desinclina ícone e texto */
+    transform: skewX(15deg);
 }
-
 /* Ícones específicos */
 .custom-button i {
-    font-size: 1.5rem; /* Tamanho maior para ícones */
+    font-size: 1.5rem;
 }
-
-/* Estilo para tema escuro */
-body[data-theme="dark"] .custom-button {
-    color: #f0f0f0;
-    background: linear-gradient(45deg, #2a2a2a, #3a3a3a);
-    border-color: #444;
-}
-
 /* Efeito hover */
 .custom-button:hover {
     transform: skewX(-15deg) translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: #191970 !important;
 }
-
+/* Estilo para tema escuro */
+body[data-theme="dark"] .custom-button {
+    color: #f0f0f0;
+    background: linear-gradient(45deg, #2a2a2a, #3a3a3a);
+    border-color: #444;
+}
 body[data-theme="dark"] .custom-button:hover {
     color: #7bebe9 !important;
-}
-
-/* Remover estilos padrão do Bootstrap dos links */
-a.custom-button {
-    text-decoration: none !important;
 }

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
             footer: "bg-light text-dark",
             metaColor: "#ffffff",
             em: "destaque",
-            logo: "logo-blackwhite",
+            logo: "logo-mono",
             icon: "bi-sun nav-link",
             imageSrc: "imagens/perfis/perfil-light.png"
         },

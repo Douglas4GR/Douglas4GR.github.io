@@ -32,6 +32,15 @@ body[data-theme="dark"] {
     display: inline-block;
 }
 
+.logo-mono {
+    background-image: url('../imagens/logos/logo-sem-fundo.png');
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+
 /* Estilo neutro para cartas */
 .card-neutro {
     border-radius: 15px;
